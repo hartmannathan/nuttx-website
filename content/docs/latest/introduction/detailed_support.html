@@ -17,63 +17,38 @@
  under the License.
 -->
 
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Detailed Platform Support &mdash; NuttX latest documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Development Environments" href="development_environments.html" />
     <link rel="prev" title="Supported Platforms" href="supported_platforms.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
   
     <a href="../index.html" class="icon icon-home"> NuttX
   
@@ -98,6 +73,12 @@
     
     <option value="../../10.1.0" >10.1.0</option>
     
+    <option value="../../10.2.0" >10.2.0</option>
+    
+    <option value="../../10.3.0" >10.3.0</option>
+    
+    <option value="../../11.0.0" >11.0.0</option>
+    
     </select>
   </div>
 
@@ -110,17 +91,8 @@
   </form>
 </div>
 
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Introduction</a><ul class="current">
@@ -162,6 +134,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#arm-cortex-a8">ARM Cortex-A8</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#allwinner-a10">Allwinner A10</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ti-sitara-am335x">TI/Sitara AM335x</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#arm-cortex-a53">ARM Cortex-A53</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#allwinner-a64">Allwinner A64</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#arm-cortex-a9">ARM Cortex-A9</a><ul>
@@ -252,6 +228,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#ti-stellaris-lm4f120x">TI/Stellaris LM4F120x</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ti-tiva-tm4c123g">TI/Tiva TM4C123G</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ti-tiva-tm4c1294">TI/Tiva TM4C1294</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ti-tiva-tm4c129e">TI/Tiva TM4C129E</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ti-tiva-tm4c129x">TI/Tiva TM4C129X</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ti-simplelink-cc13x2">TI/SimpleLink CC13x2</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#microchip-sam4l">Microchip SAM4L</a></li>
@@ -300,10 +277,19 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#risc-v">RISC-V</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#litex-on-arty-a7">LiteX on ARTY A7</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#esp32-c3">ESP32-C3</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#esp32-dual-xtensa-lx6">ESP32 (Dual Xtensa LX6)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#xtensa-lx6-esp32">Xtensa LX6 ESP32</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#esp32-s2-single-xtensa-lx7">ESP32-S2 (Single Xtensa LX7)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#xtensa-lx7-esp32-s2">Xtensa LX7 ESP32-S2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#esp32-s3-dual-xtensa-lx7">ESP32-S3 (Dual Xtensa LX7)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#xtensa-lx7-esp32-s3">Xtensa LX7 ESP32-S3</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#zilog-zneo-z16f">Zilog ZNEO Z16F</a></li>
@@ -320,6 +306,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../quickstart/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="inviolables.html">The Inviolable Principles of NuttX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../platforms/index.html">Supported Platforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../components/index.html">OS Components</a></li>
@@ -327,141 +314,98 @@
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">NuttX</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">Introduction</a> &raquo;</li>
-        
       <li>Detailed Platform Support</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/introduction/detailed_support.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="detailed-platform-support">
-<h1>Detailed Platform Support<a class="headerlink" href="#detailed-platform-support" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="detailed-platform-support">
+<h1>Detailed Platform Support<a class="headerlink" href="#detailed-platform-support" title="Permalink to this headline"></a></h1>
 <p><strong>Details</strong>. The details, caveats and fine print follow. For even more
 information see the <em>README</em> files that can be found
 <a class="reference external" href="https://cwiki.apache.org/confluence/display/NUTTX/README+Files">here</a>.</p>
-<div class="section" id="linux-user-mode-simulation">
-<h2>Linux User Mode Simulation<a class="headerlink" href="#linux-user-mode-simulation" title="Permalink to this headline">¶</a></h2>
+<section id="linux-user-mode-simulation">
+<h2>Linux User Mode Simulation<a class="headerlink" href="#linux-user-mode-simulation" title="Permalink to this headline"></a></h2>
 <p>A user-mode port of NuttX to the x86 Linux/Cygwin platform is available.
 The purpose of this port is primarily to support OS feature development.</p>
-</div>
-<div class="section" id="arm7tdmi">
-<h2>ARM7TDMI<a class="headerlink" href="#arm7tdmi" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="ti-tms320-c5471">
-<h3>TI TMS320-C5471<a class="headerlink" href="#ti-tms320-c5471" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="arm7tdmi">
+<h2>ARM7TDMI<a class="headerlink" href="#arm7tdmi" title="Permalink to this headline"></a></h2>
+<section id="ti-tms320-c5471">
+<h3>TI TMS320-C5471<a class="headerlink" href="#ti-tms320-c5471" title="Permalink to this headline"></a></h3>
 <p>(also called <strong>C5471</strong> or <strong>TMS320DA180</strong> or <strong>DA180</strong>)</p>
 <p>NuttX operates on the ARM7 of this dual core processor. This port uses
 the <a class="reference external" href="http://www.spectrumdigital.com/">Spectrum Digital</a> evaluation
 board with a GNU arm-nuttx-elf toolchain* under Linux or Cygwin.</p>
-</div>
-<div class="section" id="nxp-lpc214x">
-<h3>NXP LPC214x<a class="headerlink" href="#nxp-lpc214x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-lpc214x">
+<h3>NXP LPC214x<a class="headerlink" href="#nxp-lpc214x" title="Permalink to this headline"></a></h3>
 <p>Support is provided for the NXP LPC214x family of
 processors. In particular, support is provided for (1) the mcu123.com
 lpc214x evaluation board (LPC2148) and (1) the The0.net ZPA213X/4XPA
 development board (with the The0.net UG-2864AMBAG01 OLED) This port also
 used the GNU arm-nuttx-elf toolchain* under Linux or Cygwin.</p>
-</div>
-<div class="section" id="nxp-lpc2378">
-<h3>NXP LPC2378<a class="headerlink" href="#nxp-lpc2378" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-lpc2378">
+<h3>NXP LPC2378<a class="headerlink" href="#nxp-lpc2378" title="Permalink to this headline"></a></h3>
 <p>Support is provided for the NXP LPC2378 MCU. In particular,
 support is provided for the Olimex-LPC2378 development board. This port
 was contributed by Rommel Marcelo is was first released in NuttX-5.3.
 This port also used the GNU arm-nuttx-elf toolchain* under Linux or
 Cygwin.</p>
-</div>
-<div class="section" id="stmicro-str71x">
-<h3>STMicro STR71x<a class="headerlink" href="#stmicro-str71x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-str71x">
+<h3>STMicro STR71x<a class="headerlink" href="#stmicro-str71x" title="Permalink to this headline"></a></h3>
 <p>Support is provided for the STMicro STR71x family of
 processors. In particular, support is provided for the Olimex STR-P711
 evaluation board. This port also used the GNU arm-nuttx-elf toolchain*
 under Linux or Cygwin.</p>
-</div>
-</div>
-<div class="section" id="arm920t">
-<h2>ARM920T<a class="headerlink" href="#arm920t" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="nxp-freescale-i-mx1">
-<h3>NXP/Freescale i.MX1<a class="headerlink" href="#nxp-freescale-i-mx1" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="arm920t">
+<h2>ARM920T<a class="headerlink" href="#arm920t" title="Permalink to this headline"></a></h2>
+<section id="nxp-freescale-i-mx1">
+<h3>NXP/Freescale i.MX1<a class="headerlink" href="#nxp-freescale-i-mx1" title="Permalink to this headline"></a></h3>
 <p>Or MC9328MX1 – This port uses the Freescale MX1ADS
 development board with a GNU arm-nuttx-elf toolchain* under either
 Linux or Cygwin.</p>
-</div>
-</div>
-<div class="section" id="arm926ejs">
-<h2>ARM926EJS<a class="headerlink" href="#arm926ejs" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="ti-tms320-dm320">
-<h3>TI TMS320-DM320<a class="headerlink" href="#ti-tms320-dm320" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="arm926ejs">
+<h2>ARM926EJS<a class="headerlink" href="#arm926ejs" title="Permalink to this headline"></a></h2>
+<section id="ti-tms320-dm320">
+<h3>TI TMS320-DM320<a class="headerlink" href="#ti-tms320-dm320" title="Permalink to this headline"></a></h3>
 <p>(also called <strong>DM320</strong>)</p>
 <p>NuttX operates on the ARM9 of
 this dual core processor. This port uses the Neuros OSD
 with a GNU arm-nuttx-elf toolchain* under Linux or Cygwin. The port was
 performed using the OSD v1.0, development board.</p>
-</div>
-<div class="section" id="nxp-lpc3131">
-<h3>NXP LPC3131<a class="headerlink" href="#nxp-lpc3131" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-lpc3131">
+<h3>NXP LPC3131<a class="headerlink" href="#nxp-lpc3131" title="Permalink to this headline"></a></h3>
 <p>Two boards based on the NXP LPC3131 are supported:</p>
 <ul class="simple">
 <li><p>First, a port for the NXP LPC3131
@@ -473,28 +417,28 @@ on the <a class="reference external" href="https://www.olimex.com/Products/ARM/N
 LPC-H3131</a>
 development board was added in NuttX-6.32.</p></li>
 </ul>
-</div>
-<div class="section" id="nxp-lpc315x">
-<h3>NXP LPC315x<a class="headerlink" href="#nxp-lpc315x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-lpc315x">
+<h3>NXP LPC315x<a class="headerlink" href="#nxp-lpc315x" title="Permalink to this headline"></a></h3>
 <p>Support for the NXP LPC315x
 family has been incorporated into the code base as of NuttX-6.4. Support
 was added for the Embedded Artists EA3152 board in NuttX-6.11.</p>
-</div>
-</div>
-<div class="section" id="other-armv4">
-<h2>Other ARMv4<a class="headerlink" href="#other-armv4" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="moxa-np51x0">
-<h3>Moxa NP51x0<a class="headerlink" href="#moxa-np51x0" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="other-armv4">
+<h2>Other ARMv4<a class="headerlink" href="#other-armv4" title="Permalink to this headline"></a></h2>
+<section id="moxa-np51x0">
+<h3>Moxa NP51x0<a class="headerlink" href="#moxa-np51x0" title="Permalink to this headline"></a></h3>
 <p>A port to the Moxa NP51x0 series of 2-port advanced
 RS-232/422/485 serial device servers was contributed by Anton D.
 Kachalov in NuttX-7.11. This port includes <a class="reference internal" href="../applications/nsh/nsh.html#nsh"><span class="std std-ref">NSH</span></a>
 configuration with support for the Faraday FTMAC100 Ethernet MAC Driver.</p>
-</div>
-</div>
-<div class="section" id="arm1176jz">
-<h2>ARM1176JZ<a class="headerlink" href="#arm1176jz" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="broadcom-bcm2708">
-<h3>Broadcom BCM2708<a class="headerlink" href="#broadcom-bcm2708" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="arm1176jz">
+<h2>ARM1176JZ<a class="headerlink" href="#arm1176jz" title="Permalink to this headline"></a></h2>
+<section id="broadcom-bcm2708">
+<h3>Broadcom BCM2708<a class="headerlink" href="#broadcom-bcm2708" title="Permalink to this headline"></a></h3>
 <p>Very basic support for the Broadcom BCM2708 was released with NuttX-7.23.</p>
 <p>Raspberry Pi Zero. This support was provided for the Raspberry Pi Zero
 which is based on the BCM2835. Basic logic is in place but the port is
@@ -506,12 +450,12 @@ file for further information.</p>
 The incomplete port along with all support for the BCM2708 was removed
 from the repository with the NuttX-7.28 release but can still be be
 found in the <em>Obsoleted</em> repository.</p>
-</div>
-</div>
-<div class="section" id="arm-cortex-a5">
-<h2>ARM Cortex-A5<a class="headerlink" href="#arm-cortex-a5" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="microchip-sama5d2">
-<h3>Microchip SAMA5D2<a class="headerlink" href="#microchip-sama5d2" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="arm-cortex-a5">
+<h2>ARM Cortex-A5<a class="headerlink" href="#arm-cortex-a5" title="Permalink to this headline"></a></h2>
+<section id="microchip-sama5d2">
+<h3>Microchip SAMA5D2<a class="headerlink" href="#microchip-sama5d2" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p><strong>Microchip SAMA5D2 Xplained Ultra development board</strong>. This is the port
 of NuttX to the Microchip SAMA5D2 Xplained Ultra development board. This
@@ -521,9 +465,9 @@ See <a class="reference external" href="https://www.microchip.com/Developmenttoo
 Giant Board board. This board features the Microchip SAMA5D27C-D1G.
 See <a class="reference external" href="http://groboards.com/giant-board">http://groboards.com/giant-board</a>.</p></li>
 </ul>
-</div>
-<div class="section" id="microchip-sama5d3">
-<h3>Microchip SAMA5D3<a class="headerlink" href="#microchip-sama5d3" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-sama5d3">
+<h3>Microchip SAMA5D3<a class="headerlink" href="#microchip-sama5d3" title="Permalink to this headline"></a></h3>
 <p>There are ports to two Microchip SAMA5D3 boards:</p>
 <ul>
 <li><p><strong>Microchip SAMA5D3x-EK development boards</strong>. This is the port of NuttX
@@ -605,7 +549,7 @@ Xplained board).</p>
 <p>NuttX-7.4 added support for the on-board WM8904 CODEC chip and for
 <em>Tickless</em> operation.</p>
 <p>Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/sama5/sama5d3x-ek/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/sama5/sama5d3x-ek/README.txt">README</a>
 file for further information.</p>
 </li>
 </ul>
@@ -625,11 +569,11 @@ configured to boot directly from NOR FLASH. The SAMA5D3 Xplained board
 does not have NOR FLASH and, as a consequence NuttX must boot into SDRAM
 with the help of U-Boot.</p>
 <p>Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/sama5/sama5d3-xplained/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/sama5/sama5d3-xplained/README.txt">README</a>
 file for further information.</p>
-</div>
-<div class="section" id="microchip-sama5d4">
-<h3>Microchip SAMA5D4<a class="headerlink" href="#microchip-sama5d4" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-sama5d4">
+<h3>Microchip SAMA5D4<a class="headerlink" href="#microchip-sama5d4" title="Permalink to this headline"></a></h3>
 <p>There is a port in progress on one Microchip SAMA5D4 board:</p>
 <ul>
 <li><p><strong>Microchip SAMA5D4-EK/MB development boards</strong> This is the port of NuttX
@@ -648,7 +592,7 @@ controller are also fully support in a special NxWM configuration for
 that larger display. Support for a graphics media player is included
 (although there were issues with the WM8904 audio CODEC on my board).
 An SRAM bootloader was also included. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/sama5/sama5d4-ek/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/sama5/sama5d4-ek/README.txt">README</a>
 file for current status.</p>
 </li>
 </ul>
@@ -657,12 +601,12 @@ file for current status.</p>
 native toolchain, or 4) Native Windows. All testing has been performed
 with the CodeSourcery toolchain (GCC version 4.7.3) in the Cygwin
 environment under Windows.</p>
-</div>
-</div>
-<div class="section" id="arm-cortex-a8">
-<h2>ARM Cortex-A8<a class="headerlink" href="#arm-cortex-a8" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="allwinner-a10">
-<h3>Allwinner A10<a class="headerlink" href="#allwinner-a10" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="arm-cortex-a8">
+<h2>ARM Cortex-A8<a class="headerlink" href="#arm-cortex-a8" title="Permalink to this headline"></a></h2>
+<section id="allwinner-a10">
+<h3>Allwinner A10<a class="headerlink" href="#allwinner-a10" title="Permalink to this headline"></a></h3>
 <p>These following boards are based on the Allwinner A10
 have are supported by NuttX:</p>
 <ul>
@@ -672,7 +616,7 @@ about pcDuino Lite, v1, and v2 boards. These boards are based around
 the Allwinner A10 Cortex-A8 CPU. This port was developed on the v1
 board, but the others may be compatible:</p>
 <p>Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/a1x/pcduino-a10/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/a1x/pcduino-a10/README.txt">README</a>
 file for further information.</p>
 <p><strong>STATUS</strong>. This port was an experiment was was not completely
 developed. This configuration builds and runs an NuttShell (NSH), but
@@ -682,9 +626,9 @@ basis for a more extensive development. There is, at present, no work
 in progress to extend this port, however.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="ti-sitara-am335x">
-<h3>TI/Sitara AM335x<a class="headerlink" href="#ti-sitara-am335x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ti-sitara-am335x">
+<h3>TI/Sitara AM335x<a class="headerlink" href="#ti-sitara-am335x" title="Permalink to this headline"></a></h3>
 <p>These following boards are based on the TI/Sitara
 AM335x are supported by NuttX:</p>
 <ul>
@@ -703,21 +647,31 @@ added.</p></li>
 <li><p><strong>NuttX-7.31</strong>. An LCD driver was added in NuttX-7.31.</p></li>
 </ul>
 <p>Refer to the Beaglebone Black board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/am335x/beaglebone-black/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/am335x/beaglebone-black/README.txt">README</a>
 file for further, up-to-date information.</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="section" id="arm-cortex-a9">
-<h2>ARM Cortex-A9<a class="headerlink" href="#arm-cortex-a9" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="nxp-freescale-i-mx6">
-<h3>NXP/Freescale i.MX6<a class="headerlink" href="#nxp-freescale-i-mx6" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="arm-cortex-a53">
+<h2>ARM Cortex-A53<a class="headerlink" href="#arm-cortex-a53" title="Permalink to this headline"></a></h2>
+<section id="allwinner-a64">
+<h3>Allwinner A64<a class="headerlink" href="#allwinner-a64" title="Permalink to this headline"></a></h3>
+<p>The basic port has been completed for the following Allwinner A64 board:</p>
+<ul class="simple">
+<li><p><strong>PINE64 PinePhone</strong>: Refer to <a class="reference internal" href="../platforms/arm/a64/boards/pinephone/index.html"><span class="doc">PINE64 PinePhone</span></a> for further information.</p></li>
+</ul>
+</section>
+</section>
+<section id="arm-cortex-a9">
+<h2>ARM Cortex-A9<a class="headerlink" href="#arm-cortex-a9" title="Permalink to this headline"></a></h2>
+<section id="nxp-freescale-i-mx6">
+<h3>NXP/Freescale i.MX6<a class="headerlink" href="#nxp-freescale-i-mx6" title="Permalink to this headline"></a></h3>
 <p>The basic port has been completed for the following i.MX6 board:</p>
 <ul>
 <li><p><strong>Sabre-6Quad</strong>. This is a port to the NXP/Freescale Sabre-6Quad
 board. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/imx6/sabre-6quad/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/imx6/sabre-6quad/README.txt">README</a>
 file for further information.</p>
 <p><strong>STATUS:</strong> The basic, minimal port is code complete and introduced
 in NuttX-7.15, but had not yet been tested at that time due to the
@@ -727,31 +681,31 @@ device drivers are needed to make the port usable.</p>
 <p>Basic support of NuttX running in SMP mode on the i.MX6Q was also
 accomplished in NuttX-7.16. However, there are still known issues
 with SMP support on this platform as described in the
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/imx6/sabre-6quad/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/imx6/sabre-6quad/README.txt">README</a>
 file for the board.</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="section" id="arm-cortex-r4">
-<h2>ARM Cortex-R4<a class="headerlink" href="#arm-cortex-r4" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="ti-hercules-tms570ls04xx">
-<h3>TI/Hercules TMS570LS04xx<a class="headerlink" href="#ti-hercules-tms570ls04xx" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="arm-cortex-r4">
+<h2>ARM Cortex-R4<a class="headerlink" href="#arm-cortex-r4" title="Permalink to this headline"></a></h2>
+<section id="ti-hercules-tms570ls04xx">
+<h3>TI/Hercules TMS570LS04xx<a class="headerlink" href="#ti-hercules-tms570ls04xx" title="Permalink to this headline"></a></h3>
 <p>A port is available for the Texas Instruments
 Hercules TMS570LS04x/03x LaunchPad Evaluation Kit (<em>LAUNCHXL-TMS57004</em>)
 featuring the Hercules TMS570LS0432PZ chip.</p>
-</div>
-<div class="section" id="ti-hercules-tms570ls31xx">
-<h3>TI/Hercules TMS570LS31xx<a class="headerlink" href="#ti-hercules-tms570ls31xx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ti-hercules-tms570ls31xx">
+<h3>TI/Hercules TMS570LS31xx<a class="headerlink" href="#ti-hercules-tms570ls31xx" title="Permalink to this headline"></a></h3>
 <p>Architecture support for the TMS570LS3137ZWT
 part was added in NuttX 7.25 by Ivan Ucherdzhiev. Ivan also added
 support for the TI Hercules TMS570LS31x USB Kit.</p>
-</div>
-</div>
-<div class="section" id="arm-cortex-m0-m0">
-<h2>ARM Cortex-M0/M0+<a class="headerlink" href="#arm-cortex-m0-m0" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="nuvoton-nuc120">
-<h3>nuvoTon NUC120<a class="headerlink" href="#nuvoton-nuc120" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="arm-cortex-m0-m0">
+<h2>ARM Cortex-M0/M0+<a class="headerlink" href="#arm-cortex-m0-m0" title="Permalink to this headline"></a></h2>
+<section id="nuvoton-nuc120">
+<h3>nuvoTon NUC120<a class="headerlink" href="#nuvoton-nuc120" title="Permalink to this headline"></a></h3>
 <p>This is a port of NuttX to the nuvoTon NuTiny-SDK-NUC120
 that features the NUC120LE3AN MCU.</p>
 <p><strong>STATUS</strong>. Initial support for the NUC120 was released in NuttX-6.26.
@@ -759,7 +713,7 @@ This initial support is very minimal: There is a NuttShell
 (<a class="reference internal" href="../applications/nsh/nsh.html#nsh"><span class="std std-ref">NSH</span></a>) configuration that might be the basis for an
 application development. As of this writing, more device drivers are
 needed to make this a more complete port. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/nuc1xx/nutiny-nuc120/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/nuc1xx/nutiny-nuc120/README.txt">README</a>
 file for further information.</p>
 <p><strong>Memory Usage</strong>. For a full-featured RTOS such as NuttX, providing
 support in a usable and meaningful way within the tiny memories of the
@@ -782,9 +736,9 @@ native toolchain, or 4) Native Windows. A DIY toolchain for Linux or
 Cygwin is provided by the NuttX
 <a class="reference external" href="https://bitbucket.org/nuttx/buildroot/downloads/">buildroot</a>
 package.</p>
-</div>
-<div class="section" id="nxp-freescale-kl25z">
-<h3>NXP/FreeScale KL25Z<a class="headerlink" href="#nxp-freescale-kl25z" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-freescale-kl25z">
+<h3>NXP/FreeScale KL25Z<a class="headerlink" href="#nxp-freescale-kl25z" title="Permalink to this headline"></a></h3>
 <p>There are two board ports for the KL25Z parts:</p>
 <p><strong>Freedom KL25Z</strong>. This is a port of NuttX to the Freedom KL25Z board
 that features the MKL25Z128 Cortex-M0+ MCU, 128KB of FLASH and 16KB of
@@ -797,23 +751,23 @@ SRAM. The Teensy LC is a DIP style breakout board for the MKL25Z64 and
 comes with a USB based bootloader. See the
 <a class="reference external" href="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=FRDM-KL25Z&amp;tid=vanFRDM-KL25Z">Freescale</a>
 website for further information about this board.</p>
-</div>
-<div class="section" id="nxp-freescale-kl26z">
-<h3>NXP/FreeScale KL26Z<a class="headerlink" href="#nxp-freescale-kl26z" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-freescale-kl26z">
+<h3>NXP/FreeScale KL26Z<a class="headerlink" href="#nxp-freescale-kl26z" title="Permalink to this headline"></a></h3>
 <p>This is a port of NuttX to the Freedom KL25Z
 board that features the MK26Z128VLH4 Cortex-M0+ MCU, 128KB of FLASH and
 16KB of SRAM. See the
 <a class="reference external" href="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=FRDM-KL26Z&amp;tid=vanFRDM-KL26Z">Freescale</a>
 website for further information about this board.</p>
-</div>
-<div class="section" id="microchip-samd20">
-<h3>Microchip SAMD20<a class="headerlink" href="#microchip-samd20" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-samd20">
+<h3>Microchip SAMD20<a class="headerlink" href="#microchip-samd20" title="Permalink to this headline"></a></h3>
 <p>The port of NuttX to the Microchip SAMD20-Xplained Pro
 development board. This board features the ATSAMD20J18A MCU (Cortex-M0+
 with 256KB of FLASH and 32KB of SRAM).</p>
-</div>
-<div class="section" id="microchip-samd21">
-<h3>Microchip SAMD21<a class="headerlink" href="#microchip-samd21" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-samd21">
+<h3>Microchip SAMD21<a class="headerlink" href="#microchip-samd21" title="Permalink to this headline"></a></h3>
 <p>There two boards supported for the SAMD21:</p>
 <ol class="arabic simple">
 <li><p>The port of NuttX to the Microchip SAMD21-Xplained Pro development board
@@ -822,44 +776,44 @@ added in NuttX-7.11, and</p></li>
 Assis in NuttX-8.2. The initial release included <em>nsh</em> and <em>usbnsh</em>
 configurations.</p></li>
 </ol>
-</div>
-<div class="section" id="microchip-saml21">
-<h3>Microchip SAML21<a class="headerlink" href="#microchip-saml21" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-saml21">
+<h3>Microchip SAML21<a class="headerlink" href="#microchip-saml21" title="Permalink to this headline"></a></h3>
 <p>The port of NuttX to the Microchip SAML21-Xplained Pro
 development board. This board features the ATSAML21J18A MCU (Cortex-M0+
 with 256KB of FLASH and 32KB of SRAM).</p>
-</div>
-<div class="section" id="nxp-lpc11xx">
-<h3>NXP LPC11xx<a class="headerlink" href="#nxp-lpc11xx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-lpc11xx">
+<h3>NXP LPC11xx<a class="headerlink" href="#nxp-lpc11xx" title="Permalink to this headline"></a></h3>
 <p>Support is provided for the NXP LPC11xx family of
 processors. In particular, support is provided for LPCXpresso LPC1115
 board. This port was contributed by Alan Carvalho de Assis.</p>
-</div>
-<div class="section" id="nxp-s32k11x">
-<h3>NXP S32K11x<a class="headerlink" href="#nxp-s32k11x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-s32k11x">
+<h3>NXP S32K11x<a class="headerlink" href="#nxp-s32k11x" title="Permalink to this headline"></a></h3>
 <p>Support is provided for the NXP S32K11x family of
 processors and, in particular, the S32K118EVB development board.</p>
-</div>
-</div>
-<div class="section" id="arm-cortex-m3">
-<h2>ARM Cortex-M3<a class="headerlink" href="#arm-cortex-m3" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="ti-stellaris-lm3s6432">
-<h3>TI/Stellaris LM3S6432<a class="headerlink" href="#ti-stellaris-lm3s6432" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="arm-cortex-m3">
+<h2>ARM Cortex-M3<a class="headerlink" href="#arm-cortex-m3" title="Permalink to this headline"></a></h2>
+<section id="ti-stellaris-lm3s6432">
+<h3>TI/Stellaris LM3S6432<a class="headerlink" href="#ti-stellaris-lm3s6432" title="Permalink to this headline"></a></h3>
 <p>This is a port of NuttX to the Stellaris RDK-S2E
 Reference Design Kit and the MDL-S2E Ethernet to Serial module
 (contributed by Mike Smith).</p>
-</div>
-<div class="section" id="ti-stellaris-lm3s6432s2e">
-<h3>TI/Stellaris LM3S6432S2E<a class="headerlink" href="#ti-stellaris-lm3s6432s2e" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ti-stellaris-lm3s6432s2e">
+<h3>TI/Stellaris LM3S6432S2E<a class="headerlink" href="#ti-stellaris-lm3s6432s2e" title="Permalink to this headline"></a></h3>
 <p>This port uses Serial-to-Ethernet Reference
 Design Kit and has
 similar support as for the other Stellaris family members. A
 configuration is available for the NuttShell (NSH) (see <a class="reference internal" href="../applications/nsh/nsh.html#nsh"><span class="std std-ref">NSH</span></a>). The NSH
 configuration including networking support with a Telnet NSH console.
 This port was contributed by Mike Smith.</p>
-</div>
-<div class="section" id="ti-stellaris-lm3s6918">
-<h3>TI/Stellaris LM3S6918<a class="headerlink" href="#ti-stellaris-lm3s6918" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ti-stellaris-lm3s6918">
+<h3>TI/Stellaris LM3S6918<a class="headerlink" href="#ti-stellaris-lm3s6918" title="Permalink to this headline"></a></h3>
 <p>This port uses the
 <a class="reference external" href="http://www.micromint.com/">Micromint</a> Eagle-100 development board
 with a GNU arm-nuttx-elf toolchain* under either Linux or Cygwin.</p>
@@ -869,43 +823,43 @@ native toolchain (CodeSourcery or devkitARM), or 4) Native Windows. A
 DIY toolchain for Linux or Cygwin is provided by the NuttX
 <a class="reference external" href="https://bitbucket.org/nuttx/buildroot/downloads/">buildroot</a>
 package.</p>
-</div>
-<div class="section" id="ti-stellaris-lm3s6965">
-<h3>TI/Stellaris LM3S6965<a class="headerlink" href="#ti-stellaris-lm3s6965" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ti-stellaris-lm3s6965">
+<h3>TI/Stellaris LM3S6965<a class="headerlink" href="#ti-stellaris-lm3s6965" title="Permalink to this headline"></a></h3>
 <p>This port uses the Stellaris LM3S6965 Ethernet
 Evaluation Kit with a GNU arm-nuttx-elf toolchain* under either Linux
 or Cygwin.</p>
 <p><strong>Development Environments:</strong> See the Eagle-100 LM3S6918 above.</p>
-</div>
-<div class="section" id="ti-stellaris-lm3s8962">
-<h3>TI/Stellaris LM3S8962<a class="headerlink" href="#ti-stellaris-lm3s8962" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ti-stellaris-lm3s8962">
+<h3>TI/Stellaris LM3S8962<a class="headerlink" href="#ti-stellaris-lm3s8962" title="Permalink to this headline"></a></h3>
 <p>This port uses the Stellaris EKC-LM3S8962
 Ethernet+CAN Evaluation Kit with a GNU arm-nuttx-elf toolchain* under
 either Linux or Cygwin. Contributed by Larry Arnold.</p>
-</div>
-<div class="section" id="ti-stellaris-lm3s9b92">
-<h3>TI/Stellaris LM3S9B92<a class="headerlink" href="#ti-stellaris-lm3s9b92" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ti-stellaris-lm3s9b92">
+<h3>TI/Stellaris LM3S9B92<a class="headerlink" href="#ti-stellaris-lm3s9b92" title="Permalink to this headline"></a></h3>
 <p>Architectural support for the LM3S9B92 was
 contributed by Lwazi Dube in NuttX 7.28. No board support for boards
 using the LM3S9B92 are currently available.</p>
-</div>
-<div class="section" id="ti-stellaris-lm3s9b96">
-<h3>TI/Stellaris LM3S9B96<a class="headerlink" href="#ti-stellaris-lm3s9b96" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ti-stellaris-lm3s9b96">
+<h3>TI/Stellaris LM3S9B96<a class="headerlink" href="#ti-stellaris-lm3s9b96" title="Permalink to this headline"></a></h3>
 <p>Header file support was contributed by Tiago
 Maluta for this part. Jose Pablo Rojas V. is used those header file
 changes to port NuttX to the TI/Stellaris EKK-LM3S9B96. That port was
 available in the NuttX-6.20 release. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/tiva/ekk-lm3s9b96/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/tiva/ekk-lm3s9b96/README.txt">README</a>
 file for further information.</p>
-</div>
-<div class="section" id="ti-simplelink-cc13x0">
-<h3>TI/SimpleLink CC13x0<a class="headerlink" href="#ti-simplelink-cc13x0" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ti-simplelink-cc13x0">
+<h3>TI/SimpleLink CC13x0<a class="headerlink" href="#ti-simplelink-cc13x0" title="Permalink to this headline"></a></h3>
 <p>Basic, unverified architectural support for the
 CC13x0 was added in NuttX-7.28. This is a work in progress and, with any
 luck, a fully verified port will be available in NuttX-7.29.</p>
-</div>
-<div class="section" id="silabs-efm32-gecko">
-<h3>SiLabs EFM32 Gecko<a class="headerlink" href="#silabs-efm32-gecko" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="silabs-efm32-gecko">
+<h3>SiLabs EFM32 Gecko<a class="headerlink" href="#silabs-efm32-gecko" title="Permalink to this headline"></a></h3>
 <p>This is a port for the Silicon Laboratories’ EFM32
 <em>Gecko</em> family. Board support is available for the following:</p>
 <ol class="arabic">
@@ -929,7 +883,7 @@ available on LEUART0. A single configuration is available using the
 NuttShell NSH and the LEUART0 serial console. DMA and USART-based SPI
 supported are included, but not fully tested.</p>
 <p>Refer to the EFM32 Gecko Starter Kit
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/efm32/efm32-g8xx-stk/README.txt">README.txt</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/efm32/efm32-g8xx-stk/README.txt">README.txt</a>
 file for further information.</p>
 </li>
 <li><p><strong>Olimex EFM32G880F120-STK</strong>. This board features:</p>
@@ -949,13 +903,13 @@ with ARM-JTAG-EW</p></li>
 tool-related issues. An OpenOCD compatible, SWD debugger would be
 required to make further progress in testing.</p>
 <p>Refer to the Olimex EFM32G880F120-STK
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/efm32/olimex-efm32g880f128-stk/README.txt">README.txt</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/efm32/olimex-efm32g880f128-stk/README.txt">README.txt</a>
 for further information.</p>
 </li>
 </ol>
-</div>
-<div class="section" id="silabs-efm32-giant-gecko">
-<h3>SiLabs EFM32 Giant Gecko<a class="headerlink" href="#silabs-efm32-giant-gecko" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="silabs-efm32-giant-gecko">
+<h3>SiLabs EFM32 Giant Gecko<a class="headerlink" href="#silabs-efm32-giant-gecko" title="Permalink to this headline"></a></h3>
 <p>This is a port for the Silicon Laboratories’
 EFM32 <em>Giant Gecko</em> family. This board features the EFM32GG990F1024 MCU
 with 1 MB flash and 128 kB RAM.</p>
@@ -993,9 +947,9 @@ NuttX-7.7.</p></li>
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="stmicro-stm32-l152">
-<h3>STMicro STM32 L152<a class="headerlink" href="#stmicro-stm32-l152" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-l152">
+<h3>STMicro STM32 L152<a class="headerlink" href="#stmicro-stm32-l152" title="Permalink to this headline"></a></h3>
 <p>(STM32L “EnergyLite” Line). Two boards are supported:</p>
 <ul>
 <li><p>STM32L-Discovery. This is a port of NuttX to the STMicro
@@ -1027,7 +981,7 @@ NuttShell (<a class="reference internal" href="../applications/nsh/nsh.html#nsh"
 application development. A driver for the on-board segment LCD is
 included as well as an option to drive the segment LCD from an NSH
 “built-in” command. Refer to the STM32L-Discovery board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/stm32ldiscovery/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/stm32ldiscovery/README.txt">README</a>
 file for further information.</p>
 <p><strong>Memory Usage</strong>.</p>
 <blockquote>
@@ -1046,18 +1000,18 @@ development. Static SRAM usage is about 1.2KB (&lt;4%) and leaves 14.8KB
 <p>SRAM usage at run-time can be shown with the NSH <code class="docutils literal notranslate"><span class="pre">free</span></code> command:</p>
 <p>You can see that 9.9KB (62%) of SRAM heap is still available for further
 application development while NSH is running.</p>
-</div>
-<div class="section" id="stmicro-stm32-l15x-16x">
-<h3>STMicro STM32 L15x/16x<a class="headerlink" href="#stmicro-stm32-l15x-16x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-l15x-16x">
+<h3>STMicro STM32 L15x/16x<a class="headerlink" href="#stmicro-stm32-l15x-16x" title="Permalink to this headline"></a></h3>
 <p>(STM32 L1 “EnergyLite” Medium+ Density Family).
 Support for the STM32L152 and STM32L162 Medium+ density parts from Jussi
 Kivilinna and Sami Pelkonen was included in NuttX-7.3, extending the
 basic STM32L152x support. This is <em>architecture-only</em> support, meaning
 that support for the boards with these chips is available, but no
 support for any publicly available boards is included.</p>
-</div>
-<div class="section" id="stmicro-stm32-f0xx">
-<h3>STMicro STM32 F0xx<a class="headerlink" href="#stmicro-stm32-f0xx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f0xx">
+<h3>STMicro STM32 F0xx<a class="headerlink" href="#stmicro-stm32-f0xx" title="Permalink to this headline"></a></h3>
 <p>(STM32 F0, ARM Cortex-M0). Support for the STM32 F0
 family was contributed by Alan Carvalho de Assis in NuttX-7.21. There
 are ports to three different boards in this repository:</p>
@@ -1071,9 +1025,9 @@ more usable platform.</p></li>
 <li><p><strong>Nucleo-F091RC</strong> With 32KB of SRAM the STM32 F091RC this board is a
 great match for NuttX. Contributed by Juha Niskanen in NuttX-7.21.</p></li>
 </ul>
-</div>
-<div class="section" id="stmicro-stm32-l0xx">
-<h3>STMicro STM32 L0xx<a class="headerlink" href="#stmicro-stm32-l0xx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-l0xx">
+<h3>STMicro STM32 L0xx<a class="headerlink" href="#stmicro-stm32-l0xx" title="Permalink to this headline"></a></h3>
 <p>(STM32 L0, ARM Cortex-M0). Support for the STM32 FL
 family was contributed by Mateusz Sfafoni in NuttX-7.28. There are ports
 to two different STM32 L0 boards in the repository:</p>
@@ -1081,20 +1035,20 @@ to two different STM32 L0 boards in the repository:</p>
 <div><p><strong>B-L072Z-LRWAN1</strong> Contributed byMateusz Sfafoni in NuttX-7.28.
 <strong>Nucleo-L073RZ</strong> Contributed byMateusz Sfafoni in NuttX-7.28.</p>
 </div></blockquote>
-</div>
-<div class="section" id="stmicro-stm32-g0xx">
-<h3>STMicro STM32 G0xx<a class="headerlink" href="#stmicro-stm32-g0xx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-g0xx">
+<h3>STMicro STM32 G0xx<a class="headerlink" href="#stmicro-stm32-g0xx" title="Permalink to this headline"></a></h3>
 <p>(STM32 G0, ARM Cortex-M0+). Support for the STM32 FL
 family was contributed by Mateusz Sfafoni in NuttX-7.28. There are ports
 to two different STM32 L0 boards in the repository:</p>
 <ul class="simple">
 <li><p><strong>Nucleo-G071RB</strong> Initial support for Nucleo-G071RB was contributed
 by Mateusz Szafoni in NuttX-7.31. Refer to the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32f0l0g0/nucleo-g071rb/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32f0l0g0/nucleo-g071rb/README.txt">README</a>
 file for further information.</p></li>
 <li><p><strong>Nucleo-G070RB</strong> Contributed by Daniel Pereira Volpato. in
 NuttX-8.2. Refer to the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32f0l0g0/nucleo-g070rb/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32f0l0g0/nucleo-g070rb/README.txt">README</a>
 file for further information.</p></li>
 </ul>
 <p><strong>STATUS:</strong> Status for the STM32F0xx, STM32L0xx, and STM32G0xx is shown
@@ -1111,9 +1065,9 @@ for L0. From Mateusz Szafoni.</p>
 <p><strong>NuttX-8.2</strong> Added PWM and TIM drivers for the G0. From Daniel Pereira
 Volpato.</p>
 <p><strong>NuttX-9.0</strong> Added I2C support for F0, L0 and G0.</p>
-</div>
-<div class="section" id="stmicro-stm32-f100x">
-<h3>STMicro STM32 F100x<a class="headerlink" href="#stmicro-stm32-f100x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f100x">
+<h3>STMicro STM32 F100x<a class="headerlink" href="#stmicro-stm32-f100x" title="Permalink to this headline"></a></h3>
 <p>(STM32 F1 “Value Line”Family).</p>
 <ul class="simple">
 <li><p><strong>Proprietary Boards</strong> Chip support for these STM32 “Value Line”
@@ -1124,17 +1078,17 @@ using this logic.</p></li>
 STM32VL-Discovery board was contributed by Alan Carvalho de Assis.
 The STM32VL-Discovery board features an STM32F100RB MCU. Refer to the
 NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/stm32vldiscovery/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/stm32vldiscovery/README.txt">README</a>
 file for further information.</p></li>
 </ul>
-</div>
-<div class="section" id="stmicro-stm32-f102x">
-<h3>STMicro STM32 F102x<a class="headerlink" href="#stmicro-stm32-f102x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f102x">
+<h3>STMicro STM32 F102x<a class="headerlink" href="#stmicro-stm32-f102x" title="Permalink to this headline"></a></h3>
 <p>Architecture support (only) for the STM32 F102 family
 was contributed by the PX4 team in NuttX-7.7.</p>
-</div>
-<div class="section" id="stmicro-stm32-f103c4-c8">
-<h3>STMicro STM32 F103C4/C8<a class="headerlink" href="#stmicro-stm32-f103c4-c8" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f103c4-c8">
+<h3>STMicro STM32 F103C4/C8<a class="headerlink" href="#stmicro-stm32-f103c4-c8" title="Permalink to this headline"></a></h3>
 <p>(STM32 F1 Low- and Medium-Density Family). There
 are two ports available for this family:</p>
 <ul class="simple">
@@ -1148,9 +1102,9 @@ numerous sensors, tone generators, user LEDs, and LCD support in
 NuttX 7.18.</p></li>
 </ul>
 <p><strong>STATUS:</strong></p>
-</div>
-<div class="section" id="stmicro-stm32-f103x">
-<h3>STMicro STM32 F103x<a class="headerlink" href="#stmicro-stm32-f103x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f103x">
+<h3>STMicro STM32 F103x<a class="headerlink" href="#stmicro-stm32-f103x" title="Permalink to this headline"></a></h3>
 <p>(STM32 F1 Family). Support for five board
 configurations are available. MCU support includes all of the high
 density and connectivity line families. Board supported is available
@@ -1161,23 +1115,23 @@ include:</p>
 <li><p><strong>STM3210E-EVAL</strong>. A port for the <a class="reference external" href="http://www.st.com/">STMicro</a>
 STM3210E-EVAL development board that features the STM32F103ZET6 MCU.
 Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/stm3210e-eval/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/stm3210e-eval/README.txt">README</a>
 file for further information.</p></li>
 <li><p><strong>HY-Mini STM32v board</strong>. This board is based on the STM32F103VCT
 chip. Port contributed by Laurent Latil. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/hymini-stm32v/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/hymini-stm32v/README.txt">README</a>
 file.</p></li>
 <li><p><strong>The M3 Wildfire development board (STM32F103VET6), version 2</strong>. See
 <a class="reference external" href="http://firestm32.taobao.com">http://firestm32.taobao.com</a> (the current board is version 3). Refer
 to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/fire-stm32v2/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/fire-stm32v2/README.txt">README</a>
 file for further information.</p></li>
 <li><p><strong>LeafLab’s Maple and Maple Mini boards</strong>. These boards are based on
 the STM32F103RBT6 chip for the standard version and on the
 STM32F103CBT6 for the mini version. See the
 <a class="reference external" href="http://leaflabs.com/docs/hardware/maple.html">LeafLabs</a> web site
 for hardware information; see the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/maple/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/maple/README.txt">README</a>
 file for further information about the NuttX port.</p></li>
 <li><p><strong>Olimexino-STM32</strong>. This port uses the Olimexino STM32 board
 (STM32F103RBT6). See the <a class="reference external" href="http://www.olimex.com">http://www.olimex.com</a> for further
@@ -1224,15 +1178,15 @@ native toolchain (RIDE7, CodeSourcery or devkitARM), or 4) Native
 Windows. A DIY toolchain or Linux or Cygwin is provided by the NuttX
 <a class="reference external" href="https://bitbucket.org/nuttx/buildroot/downloads/">buildroot</a>
 package.</p>
-</div>
-<div class="section" id="stmicro-stm32-f105x">
-<h3>STMicro STM32 F105x<a class="headerlink" href="#stmicro-stm32-f105x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f105x">
+<h3>STMicro STM32 F105x<a class="headerlink" href="#stmicro-stm32-f105x" title="Permalink to this headline"></a></h3>
 <p>Architecture support (only) for the STM32 F105R was
 contribed in NuttX-7.17 by Konstantin Berezenko. There is currently no
 support for boards using any STM32F105x parts in the source tree.</p>
-</div>
-<div class="section" id="stmicro-stm32-f107x">
-<h3>STMicro STM32 F107x<a class="headerlink" href="#stmicro-stm32-f107x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f107x">
+<h3>STMicro STM32 F107x<a class="headerlink" href="#stmicro-stm32-f107x" title="Permalink to this headline"></a></h3>
 <p>(STM32 F1 “Connectivity Line” family). Chip support
 for the STM32 F1 “Connectivity Line” family has been present in NuttX
 for some time and users have reported that they have successful brought
@@ -1250,7 +1204,7 @@ STMicro STM32F107VCT MCU was added in NuttX-6.22.</p>
 <p><strong>STATUS:</strong> In progress. The following have been verified: (1) Basic
 Cortex-M3 port, (2) Ethernet, (3) On-board LEDs. Refer to the NuttX
 board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/shenzhou/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/shenzhou/README.txt">README</a>
 file for further information.</p>
 <p><strong>ViewTool STM32F103/F107</strong> Support for the Viewtool
 STM32F103/F107 board was added in
@@ -1269,7 +1223,7 @@ feature</a>.</p></li>
 <p><strong>STATUS:</strong> Networking and touchscreen support are well test. But, at
 present, neither USB nor LCD functionality have been verified. Refer to
 the Viewtool STM32F103/F107
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/viewtool-stm32f107/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/viewtool-stm32f107/README.txt">README</a>
 file for further information.</p>
 <p><strong>Kamami STM32 Butterfly 2</strong> Support for the <a class="reference external" href="https://kamami.pl/zestawy-uruchomieniowe-stm32/178507-stm32butterfly2.html">Kamami STM32 Butterfly
 2</a>
@@ -1277,9 +1231,9 @@ was contributed by Michał Łyszczek in NuttX-7.18. That port features the
 STMicro STM32F107VC MCU.</p>
 <p><strong>STATUS:</strong> A configuration for the NuttShell (NSH), NSH with
 networking, and NSH with USB host are available and verified.</p>
-</div>
-<div class="section" id="stmicro-stm32-f205x">
-<h3>STMicro STM32 F205x<a class="headerlink" href="#stmicro-stm32-f205x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f205x">
+<h3>STMicro STM32 F205x<a class="headerlink" href="#stmicro-stm32-f205x" title="Permalink to this headline"></a></h3>
 <p>(STM32 F2 family). Architecture only support for the
 STM32F205RG was contributed as an anonymous contribution in NuttX-7.10.</p>
 <p><strong>Particle.io Phone</strong>. Support for the Particle.io Photon board was
@@ -1292,11 +1246,11 @@ support.</p>
 board support includes buttons, LEDS, IWDG, USB OTG HS, and procfs
 support. Configurations available for nsh, usbnsh, and wlan
 configurations. See the Photon
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/photon/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/photon/README.txt">README</a>
 file for additional information.</p>
-</div>
-<div class="section" id="stmicro-stm32-f207x">
-<h3>STMicro STM32 F207x<a class="headerlink" href="#stmicro-stm32-f207x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f207x">
+<h3>STMicro STM32 F207x<a class="headerlink" href="#stmicro-stm32-f207x" title="Permalink to this headline"></a></h3>
 <p>(STM32 F2 family)</p>
 <ul class="simple">
 <li><p>Support for the STMicro STM3220G-EVAL development board was
@@ -1308,9 +1262,9 @@ board using the STM32F207ZE MCU.</p></li>
 Szafoni in NuttX-7.28. Available configurations include NSH, ADC, and
 PWM.</p></li>
 </ul>
-</div>
-<div class="section" id="microchip-sam3u">
-<h3>Microchip SAM3U<a class="headerlink" href="#microchip-sam3u" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-sam3u">
+<h3>Microchip SAM3U<a class="headerlink" href="#microchip-sam3u" title="Permalink to this headline"></a></h3>
 <p>This port uses the <a class="reference external" href="http://www.atmel.com/">Microchip</a>
 SAM3U-EK development board that features the SAM3U4E MCU. This port uses
 a GNU arm-nuttx-elf or arm-nuttx-eabi toolchain* under either Linux or
@@ -1321,9 +1275,9 @@ native toolchain (CodeSourcery or devkitARM), or 4) Native Windows. A
 DIY toolchain for inux or Cygwin is provided by the NuttX
 <a class="reference external" href="https://bitbucket.org/nuttx/buildroot/downloads/">buildroot</a>
 package.</p>
-</div>
-<div class="section" id="microchip-sam3x">
-<h3>Microchip SAM3X<a class="headerlink" href="#microchip-sam3x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-sam3x">
+<h3>Microchip SAM3X<a class="headerlink" href="#microchip-sam3x" title="Permalink to this headline"></a></h3>
 <p>There are two SAM3X boards supported:</p>
 <ol class="arabic simple">
 <li><p>The <a class="reference external" href="http://arduino.cc//">Arduino</a> Due development board that
@@ -1337,9 +1291,9 @@ support for 4 mikroBUS Click boards.</p></li>
 </ol>
 <p><strong>Development Environments:</strong> See the Microchip SAM3U discussion
 <a class="reference external" href="#at91sam3u">above.</a></p>
-</div>
-<div class="section" id="nxp-lpc176x">
-<h3>NXP LPC176x<a class="headerlink" href="#nxp-lpc176x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-lpc176x">
+<h3>NXP LPC176x<a class="headerlink" href="#nxp-lpc176x" title="Permalink to this headline"></a></h3>
 <p>NXP LPC1766, LPC1768, and LPC1769. Drivers are available for CAN, DAC,
 Ethernet, GPIO, GPIO interrupts, I2C, UARTs, SPI, SSP, USB host, and USB
 device. Additional drivers for the RTC, ADC, DAC, Timers, PWM and MCPWM
@@ -1408,7 +1362,7 @@ and can easily be <em>reconstitued</em> if needed.</p>
 <ul class="simple">
 <li><p>Support for the mbed board was contributed by Dave Marples and
 released in NuttX-5.11. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/lpc17xx_40xx/mbed/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/lpc17xx_40xx/mbed/README.txt">README</a>
 file for further information.</p></li>
 </ul>
 </li>
@@ -1424,7 +1378,7 @@ driver</em> and <em>USB host mass storage class driver</em>.</p></li>
 <li><p>The NuttX-5.17 released added support for low-speed USB devices,
 interrupt endpoints, and a <em>USB host HID keyboard class driver</em>.</p></li>
 <li><p>Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/lpc17xx_40xx/olimex-lpc1766stk/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/lpc17xx_40xx/olimex-lpc1766stk/README.txt">README</a>
 file for further information.</p></li>
 </ul>
 <p>Verified configurations are now available for the NuttShell with
@@ -1444,7 +1398,7 @@ Code Red toolchain is supported under either Linux or Windows.
 Verified configurations include DHCPD, the NuttShell (NSH), NuttX
 graphis (NX), THTTPD, and USB mass storage device. Refer to the NuttX
 board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/lpc17xx_40xx/lpcxpresso-lpc1768/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/lpc17xx_40xx/lpcxpresso-lpc1768/README.txt">README</a>
 file for further information.</p>
 </li>
 <li><p><strong>Zilogic’s ZKIT-ARM-1769 board</strong></p>
@@ -1453,7 +1407,7 @@ based on the NXP LPC1769. The initial release was included
 NuttX-6.26. The NuttX Buildroot toolchain is used by default. Verifed
 configurations include the “Hello, World!” example application and a
 THTTPD demonstration. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/lpc17xx_40xx/zkit-arm-1769/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/lpc17xx_40xx/zkit-arm-1769/README.txt">README</a>
 file for further information.</p>
 </li>
 <li><p><strong>Micromint Lincoln60 board with an NXP LPC1769</strong></p>
@@ -1461,7 +1415,7 @@ file for further information.</p>
 NuttX-6.20. As contributed board support, I am unsure of what all has
 been verfied and what has not. See the Microment website
 and the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/lpc17xx_40xx/lincoln60/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/lpc17xx_40xx/lincoln60/README.txt">README</a>
 file for further information about the Lincoln board.</p>
 </li>
 <li><p><strong>U-Blox Modem Evaluation (LPCXpresso LPC1768)</strong></p>
@@ -1469,7 +1423,7 @@ file for further information about the Lincoln board.</p>
 and made available in NuttX-7.15. This is a variant of the LPCXpresso
 LPC1768 board support with special provisions for the U-Blox Model
 Evaluation board. See the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/lpc17xx_40xx/u-blox-c027/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/lpc17xx_40xx/u-blox-c027/README.txt">README</a>
 file for further information about this port.</p>
 </li>
 <li><p><strong>Keil MCB1700 (LPC1768)</strong></p>
@@ -1487,17 +1441,17 @@ native toolchain (CodeSourcery devkitARM or Code Red), or 4) Native
 Windows. A DIY toolchain for Linux or Cygwin is provided by the NuttX
 <a class="reference external" href="https://bitbucket.org/nuttx/buildroot/downloads/">buildroot</a>
 package.</p>
-</div>
-<div class="section" id="nxp-lpc178x">
-<h3>NXP LPC178x<a class="headerlink" href="#nxp-lpc178x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-lpc178x">
+<h3>NXP LPC178x<a class="headerlink" href="#nxp-lpc178x" title="Permalink to this headline"></a></h3>
 <p>The port of NuttX to the WaveShare Open1788 is a
 collaborative effort between Rommel Marcelo and myself (with Rommel
 being the leading contributor and I claiming only a support role). You
 can get more information at the Open1788 board from the WaveShare
 website.</p>
-</div>
-<div class="section" id="on-semiconductor-lc823450">
-<h3>ON Semiconductor LC823450<a class="headerlink" href="#on-semiconductor-lc823450" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="on-semiconductor-lc823450">
+<h3>ON Semiconductor LC823450<a class="headerlink" href="#on-semiconductor-lc823450" title="Permalink to this headline"></a></h3>
 <p>(Dual core ARM Cortex-M3). In NuttX-7.22,
 Masayuki Ishikawa contributed support for both the LC823450 architecture
 and for ON Semiconductor’s <strong>LC823450XGEVK board</strong>:</p>
@@ -1525,7 +1479,7 @@ Semiconductor</a>
 website as are LC823450 <a class="reference external" href="http://www.onsemi.com/PowerSolutions/supportDoc.do?type=AppNotes&amp;rpn=LC823450">related technical
 documents</a>.
 Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/lc823450/lc823450-xgevk/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/lc823450/lc823450-xgevk/README.txt">README</a>
 file for details of the NuttX port.</p>
 <p>This port is intended to test LC823450 features including SMP. Supported
 peripherals include UART, TIMER, RTC, GPIO, DMA, I2C, SPI, LCD, eMMC,
@@ -1533,9 +1487,9 @@ and USB device. ADC, Watchdog, IPC2, and I2S support was added by
 Masayuki Ishikawa in NuttX-7.23. Bluetooth, SPI, and <em>PROTECTED</em> build
 support were added by Masayuki Ishikawa in NuttX-7.26. Support for for
 SPI flash boot was added in NuttX-7.28.</p>
-</div>
-<div class="section" id="maxim-integrated-max32660">
-<h3>Maxim Integrated MAX32660<a class="headerlink" href="#maxim-integrated-max32660" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="maxim-integrated-max32660">
+<h3>Maxim Integrated MAX32660<a class="headerlink" href="#maxim-integrated-max32660" title="Permalink to this headline"></a></h3>
 <p>Architectural upport for the MAX32660 was added (along with partial
 support for other members of the MAX326xx family) in NuttX 7.28.</p>
 <p><strong>MAX32660-EVSYS</strong>. Basic support for the Maxim Integrated MAC3X660
@@ -1544,12 +1498,12 @@ is available and is fully functional. Includes unverified support for an
 SPI0-based SD card.</p>
 <p><strong>STATUS:</strong></p>
 <p>` &lt;#&gt;`__ (ARM Cortex-M3)</p>
-</div>
-</div>
-<div class="section" id="arm-cortex-m4">
-<h2>ARM Cortex-M4<a class="headerlink" href="#arm-cortex-m4" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="infineon-xmc45xx">
-<h3>Infineon XMC45xx<a class="headerlink" href="#infineon-xmc45xx" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="arm-cortex-m4">
+<h2>ARM Cortex-M4<a class="headerlink" href="#arm-cortex-m4" title="Permalink to this headline"></a></h2>
+<section id="infineon-xmc45xx">
+<h3>Infineon XMC45xx<a class="headerlink" href="#infineon-xmc45xx" title="Permalink to this headline"></a></h3>
 <p>An initial but still incomplete port to the XMC4500 Relax board was released
 with NuttX-7.21 (although it was not really ready for prime time). Basic NSH
 functionality was a serial console was added by Alan Carvahlo de Assis in
@@ -1558,11 +1512,11 @@ NuttX-7.23. Alan also added an SPI driver in NuttX-7.25.</p>
 described on the manufacturer’s
 <a class="reference external" href="http://www.infineon.com/cms/en/product/evaluation-boards/KIT_XMC45_RELAX_V1/productType.html?productType=db3a304437849205013813b23ac17763">website</a>.
 The current status of the board is available in the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/xmc4/xmc4500-relax/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/xmc4/xmc4500-relax/README.txt">README</a>
 file</p>
-</div>
-<div class="section" id="nordic-semiconductor-nrf52xxx">
-<h3>Nordic Semiconductor NRF52xxx<a class="headerlink" href="#nordic-semiconductor-nrf52xxx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nordic-semiconductor-nrf52xxx">
+<h3>Nordic Semiconductor NRF52xxx<a class="headerlink" href="#nordic-semiconductor-nrf52xxx" title="Permalink to this headline"></a></h3>
 <p>Initial architecture support of the NRF52
 including UART, Timer, and GPIOs was contributed by Janne Rosberg in
 NuttX-7.25. Janne also contributed board support for the NRF52-PCA10040
@@ -1579,16 +1533,16 @@ Assis.</p></li>
 <li><p><strong>NuttX-7.29</strong>. Support for the 52804 family and an RNG drivers was
 added by Levin Li.</p></li>
 </ul>
-</div>
-<div class="section" id="nxp-freescale-kinetis-k20">
-<h3>NXP/FreeScale Kinetis K20<a class="headerlink" href="#nxp-freescale-kinetis-k20" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-freescale-kinetis-k20">
+<h3>NXP/FreeScale Kinetis K20<a class="headerlink" href="#nxp-freescale-kinetis-k20" title="Permalink to this headline"></a></h3>
 <p>Used by Teensy-3.x. Architecture support (only) was
 added in NuttX-7.10. This support was taken from PX4 and is the work of
 Jakob Odersky. Support was added for the PJRC Teensy-3.1 board in
 NuttX-7.11. Backward compatible support for the Teensy-3.0 is included.</p>
-</div>
-<div class="section" id="nxp-freescale-kinetis-k28f">
-<h3>NXP/FreeScale Kinetis K28F<a class="headerlink" href="#nxp-freescale-kinetis-k28f" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-freescale-kinetis-k28f">
+<h3>NXP/FreeScale Kinetis K28F<a class="headerlink" href="#nxp-freescale-kinetis-k28f" title="Permalink to this headline"></a></h3>
 <p>Use by Freedom-K28F. Architecture support for the
 Kinetis K28F along with board support for the Freedom-K28F was added in
 NuttX-7.15. The Freedom-K28F board is based on the Kinetis
@@ -1596,17 +1550,17 @@ MK28FN2M0VMI15 MCU (ARM Cortex-M4 at150 MHz, 1 MB SRAM, 2 MB flash, HS
 and FS USB, 169 MAPBGA package). More information is available from the
 <a class="reference external" href="https://www.nxp.com/support/developer-resources/hardware-development-tools/freedom-development-boards/mcu-boards/nxp-freedom-development-board-for-kinetis-k27-and-k28-mcus:FRDM-K28F">NXP
 website</a>.</p>
-</div>
-<div class="section" id="nxp-freescale-kinetis-k40">
-<h3>NXP/FreeScale Kinetis K40<a class="headerlink" href="#nxp-freescale-kinetis-k40" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-freescale-kinetis-k40">
+<h3>NXP/FreeScale Kinetis K40<a class="headerlink" href="#nxp-freescale-kinetis-k40" title="Permalink to this headline"></a></h3>
 <p>This port uses the Freescale Kinetis KwikStik
 K40. Refer to the <a class="reference external" href="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=KWIKSTIK-K40">Freescale web
 site</a>
 for further information about this board. The Kwikstik is used with the
 FreeScale Tower System (mostly just to provide a simple UART connection)</p>
-</div>
-<div class="section" id="nxp-freescale-kinetis-k60">
-<h3>NXP/FreeScale Kinetis K60<a class="headerlink" href="#nxp-freescale-kinetis-k60" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-freescale-kinetis-k60">
+<h3>NXP/FreeScale Kinetis K60<a class="headerlink" href="#nxp-freescale-kinetis-k60" title="Permalink to this headline"></a></h3>
 <p>This port uses the <strong>Freescale Kinetis
 TWR-K60N512</strong> tower system. Refer to the <a class="reference external" href="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=TWR-K60N512-KIT">Freescale web
 site</a>
@@ -1615,16 +1569,16 @@ the FreeScale Tower System which provides (among other things) a DBP
 UART connection.</p>
 <p><strong>MK60N512VLL100</strong>. Architecture support for the MK60N512VLL100 was
 contributed by Andrew Webster in NuttX-7.14.</p>
-</div>
-<div class="section" id="nxp-freescale-kinetis-k64">
-<h3>NXP/FreeScale Kinetis K64<a class="headerlink" href="#nxp-freescale-kinetis-k64" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-freescale-kinetis-k64">
+<h3>NXP/FreeScale Kinetis K64<a class="headerlink" href="#nxp-freescale-kinetis-k64" title="Permalink to this headline"></a></h3>
 <p>Support for the Kinetis K64 family and
 specifically for the <strong>NXP/Freescale Freedom K64F</strong> board was added in
 NuttX 7.17. Initial release includes two NSH configurations with support
 for on-board LEDs, buttons, and Ethernet with the on-board KSZ8081 PHY.
 SDHC supported has been integrated, but not verified. Refer to the NuttX
 board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/kinetis/freedom-k64f/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/kinetis/freedom-k64f/README.txt">README</a>
 file for further information.</p>
 <p><strong>MK64FN1M0VMD12</strong>. Architecture support for the _MK64FN1M0VMD12 was
 contributed by Maciej Skrzypek in NuttX-7.20.</p>
@@ -1637,7 +1591,7 @@ by
 <a class="reference external" href="http://www.nxp.com/pages/serial-usb-ethernet-can-rs232-485-tower-system-module:TWR-SER">TWR-SER</a>
 which includes (among other things), an RS232 and Ethernet connections.
 Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/kinetis/twr-k64f120m/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/kinetis/twr-k64f120m/README.txt">README</a>
 file for further information.</p>
 <p><strong>Driver Status</strong>.</p>
 <ul class="simple">
@@ -1653,13 +1607,13 @@ thanks to the efforts of Andrew Webster.</p></li>
 Freedom K64F. A Kinetis USB device controller driver and PWM support
 was contributed by kfazz.</p></li>
 </ul>
-</div>
-<div class="section" id="nxp-freescale-kinetis-k66">
-<h3>NXP/FreeScale Kinetis K66<a class="headerlink" href="#nxp-freescale-kinetis-k66" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-freescale-kinetis-k66">
+<h3>NXP/FreeScale Kinetis K66<a class="headerlink" href="#nxp-freescale-kinetis-k66" title="Permalink to this headline"></a></h3>
 <p>Support for the Kinetis K64 family and
 specifically for the <strong>NXP/Freescale Freedom K66F</strong> board was
 contributed by David Sidrane in NuttX 7.20. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/kinetis/freedom-k66f/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/kinetis/freedom-k66f/README.txt">README</a>
 file for further information.</p>
 <p><strong>Driver Status</strong>.</p>
 <ul class="simple">
@@ -1671,9 +1625,9 @@ I2C device drivers, RTC alarm functionality, and new SPI driver.</p></li>
 <li><p><strong>NuttX-7.26</strong>. David Sidrane contributed DMA support to the Kinetis
 K6x family.</p></li>
 </ul>
-</div>
-<div class="section" id="sony-cxd56xx">
-<h3>Sony CXD56xx<a class="headerlink" href="#sony-cxd56xx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="sony-cxd56xx">
+<h3>Sony CXD56xx<a class="headerlink" href="#sony-cxd56xx" title="Permalink to this headline"></a></h3>
 <p>(6 x ARM Cortex-M4)</p>
 <p>Support for the CXD56<em>xx</em> was
 introduced by Nobuto Kobayashi in NuttX-7.30.</p>
@@ -1712,19 +1666,19 @@ camera support, added audio and board audio control implementation,
 added an audio_tone_generator, added optional initialization of GNSS and
 GEOFENCE at boot if the drivers are enabled, added an lcd examples
 configuration.</p>
-</div>
-<div class="section" id="stmicro-stm32-f302x">
-<h3>STMicro STM32 F302x<a class="headerlink" href="#stmicro-stm32-f302x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f302x">
+<h3>STMicro STM32 F302x<a class="headerlink" href="#stmicro-stm32-f302x" title="Permalink to this headline"></a></h3>
 <p>(STM32 F3 family). Architecture (only) support for
 the STM32 F302 was contributed in NuttX-7.10 by Ben Dyer (via the PX4
 team and David Sidrane).</p>
 <p>Support for the Nucleo-F302R8 board was added by raiden00pl in
 NuttX-7.27. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/nucleo-f302r8/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/nucleo-f302r8/README.txt">README</a>
 file for further information.</p>
-</div>
-<div class="section" id="stmicro-stm32-f303x">
-<h3>STMicro STM32 F303x<a class="headerlink" href="#stmicro-stm32-f303x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f303x">
+<h3>STMicro STM32 F303x<a class="headerlink" href="#stmicro-stm32-f303x" title="Permalink to this headline"></a></h3>
 <p>(STM32 F3 family)</p>
 <ul class="simple">
 <li><p><strong>STM32F3-Discovery</strong>. This port uses the STMicro STM32F3-Discovery
@@ -1735,31 +1689,31 @@ further information about this board.</p></li>
 <li><p><strong>STMicro ST Nucleo F303RE board</strong>. The basic port for the Nucleo
 F303RE was contributed by Paul Alexander Patience and first released
 in NuttX-7.12. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/nucleo-f303re/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/nucleo-f303re/README.txt">README</a>
 file for further information.</p></li>
 <li><p><strong>STMicro ST Nucleo F303ZE board</strong>. Support for the Nucleo-F303ZE
 board was added by Mateusz Szafoni in NuttX-7.27. Refer to the NuttX
 board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/nucleo-f303ze/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/nucleo-f303ze/README.txt">README</a>
 file for further information.</p></li>
 </ul>
-</div>
-<div class="section" id="stmicro-stm32-f334">
-<h3>STMicro STM32 F334<a class="headerlink" href="#stmicro-stm32-f334" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f334">
+<h3>STMicro STM32 F334<a class="headerlink" href="#stmicro-stm32-f334" title="Permalink to this headline"></a></h3>
 <p>(STM32 F3 family, ARM Cortex-M4)</p>
 <p>Support for the STMicro <strong>STM32F334-Disco</strong> board was contributed by
 Mateusz Szafoni in NuttX-7.22 and for the <strong>Nucleo-STM32F334R8</strong> was
 contributed in an earlier release.</p>
-</div>
-<div class="section" id="stmicro-stm32-f372-f373">
-<h3>STMicro STM32 F372/F373<a class="headerlink" href="#stmicro-stm32-f372-f373" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f372-f373">
+<h3>STMicro STM32 F372/F373<a class="headerlink" href="#stmicro-stm32-f372-f373" title="Permalink to this headline"></a></h3>
 <p>(ARM Cortex-M4)</p>
 <p>Basic architecture support for the STM32F372/F373 was contributed by
 Marten Svanfeldt in NuttX 7.9. There are no STM32F*72 boards currently
 supported, however.</p>
-</div>
-<div class="section" id="stmicro-stm32-f4x1">
-<h3>STMicro STM32 F4x1<a class="headerlink" href="#stmicro-stm32-f4x1" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f4x1">
+<h3>STMicro STM32 F4x1<a class="headerlink" href="#stmicro-stm32-f4x1" title="Permalink to this headline"></a></h3>
 <p>(STM32 F4 family).</p>
 <p><strong>Nucleo F401RE</strong>. This port uses the STMicro Nucleo F401RE board
 featuring the STM32F401RE MCU. Refer to the <a class="reference external" href="http://www.st.com/en/evaluation-tools/nucleo-f401re.html">STMicro web
@@ -1778,18 +1732,18 @@ added by Serg Podtynnyi.</p></li>
 <li><p><strong>NuttX-7.25</strong> Architecture support (only) for STMicro STM32F401xB
 and STM32F401xC pars was added.</p></li>
 <li><p>Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/nucleo-f4x1re/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/nucleo-f4x1re/README.txt">README</a>
 file for further information.</p></li>
 </ul>
-</div>
-<div class="section" id="stmicro-stm32410">
-<h3>STMicro STM32410<a class="headerlink" href="#stmicro-stm32410" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32410">
+<h3>STMicro STM32410<a class="headerlink" href="#stmicro-stm32410" title="Permalink to this headline"></a></h3>
 <p>(STM32 F4 family)</p>
 <p>Architecture-only support was contributed to NuttX-7.21 by Gwenhael
 Goavec-Merou.</p>
-</div>
-<div class="section" id="stmicro-stm32-f405x-407x">
-<h3>STMicro STM32 F405x/407x<a class="headerlink" href="#stmicro-stm32-f405x-407x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f405x-407x">
+<h3>STMicro STM32 F405x/407x<a class="headerlink" href="#stmicro-stm32-f405x-407x" title="Permalink to this headline"></a></h3>
 <p>(STM32 F4 family).</p>
 <p><strong>STMicro STM3240G-EVAL</strong>. This port uses the STMicro STM3240G-EVAL
 board featuring the STM32F407IGH6 MCU. Refer to the <a class="reference external" href="http://www.st.com/internet/evalboard/product/252216.jsp">STMicro web
@@ -1833,7 +1787,7 @@ NuttX-7.19.</p></li>
 board was added in NuttX-7.29.</p></li>
 </ul>
 <p>Refer to the STM3240G-EVAL board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/stm3240g-eval/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/stm3240g-eval/README.txt">README</a>
 file for further information.</p>
 <p><strong>STMicro STM32F4-Discovery</strong>. This port uses the STMicro
 STM32F4-Discovery board featuring the STM32F407VGT6 MCU. The
@@ -1869,26 +1823,26 @@ on-board peripherals than does the STM32F4-Discovery:</p>
 <p>See the
 <a class="reference external" href="http://www.mikroe.com/mikromedia/stm32-m4/">Mikroelektronika</a>
 website for more information about this board and the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/mikroe-stm32f4/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/mikroe-stm32f4/README.txt">README</a>
 file for further information about the NuttX port.</p>
 <p><strong>Olimex STM32 H405</strong>. Support for the Olimex STM32 H405 development
 board was contributed by Martin Lederhilger and appeared in NuttX-7.3.
 See the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/olimex-stm32-h405/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/olimex-stm32-h405/README.txt">README</a>
 file for further information about the NuttX port.</p>
 <p><strong>Olimex STM32 H407</strong>. Support for the Olimex STM32 H407 development
 board was contributed by Neil Hancock and appeared in NuttX-7.14. See
 the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/olimex-stm32-h407/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/olimex-stm32-h407/README.txt">README</a>
 file for further information about the NuttX port.</p>
 <p><strong>Olimex STM32 E407</strong>. Support for the Olimex STM32 E407 development
 board was contributed by Mateusz Szafoni and appeared in NuttX-7.17.
 Networking configurations were added in NuttX-7.18. See the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/olimex-stm32-e407/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/olimex-stm32-e407/README.txt">README</a>
 file for further information about the NuttX port.</p>
 <p><strong>Olimex STM32 P407</strong>. Support for the Olimex STM32 P407 development
 board appeared in NuttX-7.19. See the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/olimex-stm32-p407/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/olimex-stm32-p407/README.txt">README</a>
 file for further information about the NuttX port.</p>
 <p><strong>MikroElektronika Clicker2 for STM32</strong>. This is yet another board
 supported by NuttX that uses the same STM32F407VGT6 MCU as does the
@@ -1898,7 +1852,7 @@ MRF24J40 Click board for the development of IEEE 802.15.4 MAC and
 <p>See the
 <a class="reference external" href="https://shop.mikroe.com/development-boards/starter/clicker-2/stm32f4">Mikroelektronika</a>
 website for more information about this board and the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/clicker2-stm32/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/clicker2-stm32/README.txt">README</a>
 file for further information about the NuttX port.</p>
 <p><strong>OmnibusF4</strong>. Initial support for the OmnibusF4 family of flight
 management units was contributed by Bill Gatliff in NuttX-7.29.
@@ -1912,9 +1866,9 @@ added support as well, also based on NuttX. No code from those resources
 is included in this port. The OmnibusF4 specification mandates the
 InvenSense MPU6000 which is included in NuttX-7.29 along with a driver
 for the MAX7546 OSD.</p>
-</div>
-<div class="section" id="stmicro-stm32-f427-f437">
-<h3>STMicro STM32 F427/F437<a class="headerlink" href="#stmicro-stm32-f427-f437" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f427-f437">
+<h3>STMicro STM32 F427/F437<a class="headerlink" href="#stmicro-stm32-f427-f437" title="Permalink to this headline"></a></h3>
 <p>General architectural support was provided for
 the F427/437 family in NuttX 6.27. Specific support includes the
 STM32F427I, STM32F427Z, and STM32F427V chips. This is
@@ -1945,9 +1899,9 @@ board features:</p>
 </ul>
 <p>Refer to <a class="reference external" href="http://www.axoloti.com/">Axloti</a> website for further
 information about this board.</p>
-</div>
-<div class="section" id="stmicro-stm32-f429">
-<h3>STMicro STM32 F429<a class="headerlink" href="#stmicro-stm32-f429" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f429">
+<h3>STMicro STM32 F429<a class="headerlink" href="#stmicro-stm32-f429" title="Permalink to this headline"></a></h3>
 <p>Support for STMicro STM32F429I-Discovery development
 board featuring the STM32F429ZIT6 MCU was contributed in NuttX-6.32 by
 Ken Pettit. The STM32F429ZIT6 is a 180MHz Cortex-M4 operation with 2Mbit
@@ -1969,33 +1923,33 @@ auxiliary interface.</p></li>
 board in NuttX 7.16. From Kha Vo.</p></li>
 </ul>
 <p>Refer to the STM32F429I-Discovery board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/stm32f429i-disco/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/stm32f429i-disco/README.txt">README</a>
 file for further information.</p>
-</div>
-<div class="section" id="stmicro-stm32-f433">
-<h3>STMicro STM32 F433<a class="headerlink" href="#stmicro-stm32-f433" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f433">
+<h3>STMicro STM32 F433<a class="headerlink" href="#stmicro-stm32-f433" title="Permalink to this headline"></a></h3>
 <p>Architecture-only support for the STM32 F433 family
 was contributed by Alan Carvalho de Assis in NuttX-7.22 (meaning that
 the parts are supported, but there is no example board supported in the
 system). This support was contributed by David Sidrane and made
 available in NuttX-7.11.</p>
-</div>
-<div class="section" id="stmicro-stm32-f446">
-<h3>STMicro STM32 F446<a class="headerlink" href="#stmicro-stm32-f446" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f446">
+<h3>STMicro STM32 F446<a class="headerlink" href="#stmicro-stm32-f446" title="Permalink to this headline"></a></h3>
 <p>Architecture-only support is available for the STM32
 F446 family (meaning that the parts are supported, but there is no
 example board supported in the system). This support was contributed by
 David Sidrane and made available in NuttX-7.11.</p>
-</div>
-<div class="section" id="stmicro-stm32-f46xx">
-<h3>STMicro STM32 F46xx<a class="headerlink" href="#stmicro-stm32-f46xx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f46xx">
+<h3>STMicro STM32 F46xx<a class="headerlink" href="#stmicro-stm32-f46xx" title="Permalink to this headline"></a></h3>
 <p>Architecture-only support is available for the
 STM32 F46xx family (meaning that the parts are supported, but there is
 no example board supported in the system). This support was contributed
 by Paul Alexander Patienc and made available in NuttX-7.15.</p>
-</div>
-<div class="section" id="stmicro-stm32-g474x">
-<h3>STMicro STM32 G474x<a class="headerlink" href="#stmicro-stm32-g474x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-g474x">
+<h3>STMicro STM32 G474x<a class="headerlink" href="#stmicro-stm32-g474x" title="Permalink to this headline"></a></h3>
 <p>One board is supported in this family:</p>
 <ul class="simple">
 <li><p><strong>B-G474E-DPOW1 Discovery Kit</strong>. Initial board support for the
@@ -2003,29 +1957,29 @@ STMicro B-G474E-DPOW1 board from ST Micro was added in NuttX-9.1. See
 the <a class="reference external" href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-discovery-kits/b-g474e-dpow1.html">STMicro
 website</a>
 and the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/b-g474e-dpow1/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/b-g474e-dpow1/README.txt">README</a>
 file for further information.</p></li>
 </ul>
 <p><strong>Status</strong>:</p>
 <p><strong>NuttX-9.1</strong>. Initial support for booting NuttX to a functional NSH
 prompt on this board.</p>
-</div>
-<div class="section" id="stmicro-stm32-g431x">
-<h3>STMicro STM32 G431x<a class="headerlink" href="#stmicro-stm32-g431x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-g431x">
+<h3>STMicro STM32 G431x<a class="headerlink" href="#stmicro-stm32-g431x" title="Permalink to this headline"></a></h3>
 <p>One board is supported in this family:</p>
 <ul class="simple">
 <li><p><strong>Nucleo-G431RB</strong>. Initial board support for the
 Nucleo-G431RB was added in NuttX-10.0. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/nucleo-g431rb/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/nucleo-g431rb/README.txt">README</a>
 file for further information.</p></li>
 <li><p><strong>B-G431B-ESC1</strong>. Initial board support for the
 B-G431B-ESC1 was added in NuttX-10.0. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32/b-g431b-esc1/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32/b-g431b-esc1/README.txt">README</a>
 file for further information.</p></li>
 </ul>
-</div>
-<div class="section" id="stmicro-stm32-l475">
-<h3>STMicro STM32 L475<a class="headerlink" href="#stmicro-stm32-l475" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-l475">
+<h3>STMicro STM32 L475<a class="headerlink" href="#stmicro-stm32-l475" title="Permalink to this headline"></a></h3>
 <p>One board in supported in this family:</p>
 <ul>
 <li><p><strong>B-L475E-IOT01A Discovery Kit</strong>. Board support for the STMicro
@@ -2033,7 +1987,7 @@ B-L475E-IOT01A board from ST Micro was contributed by Simon Piriou in
 NuttX-7.22. See the <a class="reference external" href="http://www.st.com/en/evaluation-tools/b-l475e-iot01a.html">STMicro
 website</a>
 and the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32l4/b-l475e-iot01a/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32l4/b-l475e-iot01a/README.txt">README</a>
 file for further information.</p>
 <p>This board STMicro is powered by STM32L475VG Cortex-M4 and targets
 IoT nodes with a choice of connectivity options including WiFi,
@@ -2052,27 +2006,27 @@ communications are fully supported in point-to-point and in star
 topologies.</p>
 <p>Simon Pirou also contributed support for the on-board Macronix QuadSPI
 FLASH in NuttX 7.22.</p>
-</div>
-<div class="section" id="stmicro-stm32-l476">
-<h3>STMicro STM32 L476<a class="headerlink" href="#stmicro-stm32-l476" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-l476">
+<h3>STMicro STM32 L476<a class="headerlink" href="#stmicro-stm32-l476" title="Permalink to this headline"></a></h3>
 <p>Three boards are supported in this family:</p>
 <ul class="simple">
 <li><p><strong>Nucleo-L476RG</strong>. Board support for the STMicro NucleoL476RG board
 from ST Micro was contributed by Sebastien Lorquet in NuttX-7.15. See
 the <a class="reference external" href="http://www.st.com/nucleo-l476rg">STMicro website</a> and the
 board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32l4/nucleo-l476rg/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32l4/nucleo-l476rg/README.txt">README</a>
 file for further information.</p></li>
 <li><p><strong>STM32L476VG Discovery</strong>. Board support for the STMicro STM32L476VG
 Discovery board from ST Micro was contributed by Dave in NuttX-7.15.
 See the <a class="reference external" href="http://www.st.com/stm32l476g-disco">STMicro website</a> and
 the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32l4/stm32l476vg-disco/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32l4/stm32l476vg-disco/README.txt">README</a>
 file for further information.</p></li>
 <li><p><strong>STM32L476 MDK</strong>. Very basic support for NuttX on the Motorola Moto
 Z MDK was contributed by Jim Wylder in NuttX 7.18. A simple NSH
 configuration is available for the STM32L476 chip. See the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32l4/stm32l476-mdk/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32l4/stm32l476-mdk/README.txt">README</a>
 file for further information.</p></li>
 </ul>
 <p><strong>Status</strong>:</p>
@@ -2124,9 +2078,9 @@ family is present. It includes these basics:</p>
 N.</p>
 <p>Enable OTGFS for STM32L4+ series. The OTGFS peripheral on stm32l4x6 and
 stm32l4rxxx reference manual is exactly the same. From Jussi Kivilinna.</p>
-</div>
-<div class="section" id="stmicro-stm32-l4x2">
-<h3>STMicro STM32 L4x2<a class="headerlink" href="#stmicro-stm32-l4x2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-l4x2">
+<h3>STMicro STM32 L4x2<a class="headerlink" href="#stmicro-stm32-l4x2" title="Permalink to this headline"></a></h3>
 <p>Architecture support for STM32 L4x2 family was
 contributed by Juha Niskanen in NuttX-7.21. Support was extended for the
 STM32L412 and STM32L422 chips in NuttX-7.27. Two boards are currently
@@ -2137,21 +2091,21 @@ from ST Micro was contributed by JSebastien Lorquet in NuttX-7.21.
 See the <a class="reference external" href="http://www.st.com/en/evaluation-tools/nucleo-l432kc.html">STMicro
 website</a>
 and the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32l4/nucleo-l432kc/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32l4/nucleo-l432kc/README.txt">README</a>
 file for further information.</p></li>
 <li><p><strong>Nucleo-L452RE</strong>. Board support for the STMicro Nucleo-L452RE board
 from ST Micro was contributed by Juha Niskanen in NuttX-7.21. See the
 <a class="reference external" href="http://www.st.com/en/evaluation-tools/nucleo-l452re.html">STMicro
 website</a>
 and the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32l4/nucleo-l452re/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32l4/nucleo-l452re/README.txt">README</a>
 file for further information.</p></li>
 </ul>
 <p>See also the status above for the STM32 L476 most of which also applies
 to these parts.</p>
-</div>
-<div class="section" id="stmicro-stm32-l496">
-<h3>STMicro STM32 L496<a class="headerlink" href="#stmicro-stm32-l496" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-l496">
+<h3>STMicro STM32 L496<a class="headerlink" href="#stmicro-stm32-l496" title="Permalink to this headline"></a></h3>
 <p>Architecture support for STM32 L496 was contributed
 by Juha Niskanen along with board support for the Nucleo-L496ZG in
 NuttX-7.21:</p>
@@ -2161,13 +2115,13 @@ from ST Micro was contributed by Juha Niskanen in NuttX-7.21. See the
 <a class="reference external" href="http://www.st.com/en/evaluation-tools/nucleo-l496zg.html">STMicro
 website</a>
 and the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32l4/nucleo-l496zg/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32l4/nucleo-l496zg/README.txt">README</a>
 file for further information. See also the status above for the STM32
 L476 most of which also applies to this part.</p></li>
 </ul>
-</div>
-<div class="section" id="stmicro-stm32-l4rx">
-<h3>STMicro STM32 L4Rx<a class="headerlink" href="#stmicro-stm32-l4rx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-l4rx">
+<h3>STMicro STM32 L4Rx<a class="headerlink" href="#stmicro-stm32-l4rx" title="Permalink to this headline"></a></h3>
 <p>Architecture support for STM32 L4+ family was
 contributed by Juha Niskanen along with board support for the
 STM32L4R9I-Discovery in NuttX-7.26. Additional support for the
@@ -2179,13 +2133,13 @@ Niskanen in NuttX-7.26. That development board uses the STM32L4R9AI
 part. See the <a class="reference external" href="https://www.st.com/en/evaluation-tools/32l4r9idiscovery.html">STMicro
 website</a>
 and the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32l4/stm32l4r9ai-disco/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32l4/stm32l4r9ai-disco/README.txt">README</a>
 file for further information. See also the status above for the
 opther STM32 L4 parts, most of which also applies to this part.</p></li>
 </ul>
-</div>
-<div class="section" id="nxp-lpc40xx">
-<h3>NXP LPC40xx<a class="headerlink" href="#nxp-lpc40xx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-lpc40xx">
+<h3>NXP LPC40xx<a class="headerlink" href="#nxp-lpc40xx" title="Permalink to this headline"></a></h3>
 <p>The LPC40xx family is very similar to the LPC17xx family
 except that it features a Cortex-M4F versus the LPC17xx’s Cortex-M3.
 Architectural support for the LPC40xx family was built on top of the
@@ -2194,9 +2148,9 @@ support came support for two boards also contributed by jjlange:</p>
 <p><strong>LX CPU</strong>. Pavel Pisa add support for the PiKRON LX CPU board. This
 board may be configured to use either the LPC4088 or the LPC1788.</p>
 <p><strong>Driver Status.</strong></p>
-</div>
-<div class="section" id="nxp-lpc43xx">
-<h3>NXP LPC43xx<a class="headerlink" href="#nxp-lpc43xx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-lpc43xx">
+<h3>NXP LPC43xx<a class="headerlink" href="#nxp-lpc43xx" title="Permalink to this headline"></a></h3>
 <p>Several board ports are available for this higher end, NXP
 Cortex-M4F part:</p>
 <p><strong>NXG Technologies LPC4330-Xplorer</strong>. This NuttX port is for the
@@ -2206,7 +2160,7 @@ website</a>
 for further information about this board.</p>
 <ul class="simple">
 <li><p><strong>STATUS:</strong> Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/lpc43xx/lpc4330-xplorer/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/lpc43xx/lpc4330-xplorer/README.txt">README</a>
 file for more detailed information about this port.</p></li>
 <li><p><strong>NuttX-6.20</strong> The basic LPC4330-Xplorer port is complete. The basic
 NuttShell (NSH) configuration is present and fully verified. This
@@ -2221,7 +2175,7 @@ website</a>
 for more detailed information about the LPC4357 and the LPC4357-EVB.</p>
 <ul class="simple">
 <li><p><strong>STATUS:</strong> Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/lpc43xx/lpc4357-evb/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/lpc43xx/lpc4357-evb/README.txt">README</a>
 file for more detailed information about this port.</p></li>
 <li><p><strong>NuttX-7.6</strong>. The basic port is was contributed by Toby Duckworth.
 This port leverages from the LPC4330-Xplorer port (and, as of this
@@ -2234,7 +2188,7 @@ LPC4330-Xplorer as discussed above.</p></li>
 development board featuring the NXP LPC4370FET100 MCU.</p>
 <ul class="simple">
 <li><p><strong>STATUS:</strong> Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/lpc43xx/lpc4370-link2/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/lpc43xx/lpc4370-link2/README.txt">README</a>
 file for more detailed information about this port.</p></li>
 <li><p><strong>NuttX-7.12</strong> The NXP LPC4370-Link2 port is was contributed by Lok
 Tep and first released in NuttX-7.12.</p></li>
@@ -2243,7 +2197,7 @@ Tep and first released in NuttX-7.12.</p></li>
 LPC4337-WS development board featuring the NXP LPC4337JBD144 MCU.</p>
 <ul class="simple">
 <li><p><strong>STATUS:</strong> Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/lpc43xx/lpc4337-ws/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/lpc43xx/lpc4337-ws/README.txt">README</a>
 file for more detailed information about this port.</p></li>
 <li><p><strong>NuttX-7.14</strong> The NXP WaveShare LPC4337-WS port is was contributed
 by Lok Tep and first released in NuttX-7.14.</p></li>
@@ -2289,9 +2243,9 @@ leveraged from the LPC17 and contributed by Gintaras Drukteinis.
 Leveraged the LPC54xx SD/MMC to the LPC43xx. There are still
 remaining issues with the SD/MMC driver and it is not yet functional.</p></li>
 </ul>
-</div>
-<div class="section" id="nxp-lpc54xx">
-<h3>NXP LPC54xx<a class="headerlink" href="#nxp-lpc54xx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-lpc54xx">
+<h3>NXP LPC54xx<a class="headerlink" href="#nxp-lpc54xx" title="Permalink to this headline"></a></h3>
 <p>A port to the
 <a class="reference external" href="https://www.nxp.com/support/developer-resources/hardware-development-tools/lpcxpresso-boards/lpcxpresso54628-development-board:OM13098">LPCXpresso-LPC54628</a>
 was added in NuttX-7.24. Initial configurations include: A basic NSH
@@ -2310,23 +2264,23 @@ driver, however.</p></li>
 Framebuffer” feature also added in NuttX-7.29.</p></li>
 </ul>
 <p>Refer to the LPCXpresso-LPC54628 board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/lpc54xx/lpcxpresso-lpc54628/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/lpc54xx/lpcxpresso-lpc54628/README.txt">README</a>
 file for more detailed information about this port.</p>
-</div>
-<div class="section" id="nxp-s32k14x">
-<h3>NXP S32K14x<a class="headerlink" href="#nxp-s32k14x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-s32k14x">
+<h3>NXP S32K14x<a class="headerlink" href="#nxp-s32k14x" title="Permalink to this headline"></a></h3>
 <p>Support for the S32K14x family was added in NuttX-8.1. Two
 boards are supported</p>
 <ul class="simple">
 <li><p><strong>S32K146EVB</strong>. A port to the S32K146EVB was included in NuttX-8.1.
 The initial release supports two full-featured NSH configurations.
 Refer to the S32K146EVB board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/s32k1xx/s32k146evb/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/s32k1xx/s32k146evb/README.txt">README</a>
 file for more detailed information about this port.</p></li>
 <li><p><strong>S32K148EVB</strong>. A port to the S32K148EVB was also provided in
 NuttX-8.1. The initial release supports two full-featured NSH
 configurations. Refer to the S32K148EVB board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/s32k1xx/s32k148evb/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/s32k1xx/s32k148evb/README.txt">README</a>
 file for more detailed information about this port.</p></li>
 </ul>
 <p>Both boards featured two NSH configurations: One for execution out of
@@ -2340,14 +2294,14 @@ configuration, LPUART console, Systick timer, and GPIO controls.
 Additional complete-but-unverified drivers were also included: GPIO
 interrupts, eDMA, LPSPI, LPI2C, and Ethernet (S32K148 only).</p></li>
 </ul>
-</div>
-<div class="section" id="ti-stellaris-lm4f120x">
-<h3>TI/Stellaris LM4F120x<a class="headerlink" href="#ti-stellaris-lm4f120x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ti-stellaris-lm4f120x">
+<h3>TI/Stellaris LM4F120x<a class="headerlink" href="#ti-stellaris-lm4f120x" title="Permalink to this headline"></a></h3>
 <p>This port uses the TI Stellaris LM4F120 LaunchPad.
 Jose Pablo Carballo and I are doing this port.</p>
-</div>
-<div class="section" id="ti-tiva-tm4c123g">
-<h3>TI/Tiva TM4C123G<a class="headerlink" href="#ti-tiva-tm4c123g" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ti-tiva-tm4c123g">
+<h3>TI/Tiva TM4C123G<a class="headerlink" href="#ti-tiva-tm4c123g" title="Permalink to this headline"></a></h3>
 <p>This port uses the Tiva C Series TM4C123G LaunchPad
 Evaluation Kit
 <a class="reference external" href="http://www.ti.com/tool/ek-tm4c123gxl">(EK-TM4C123GXL)</a>.</p>
@@ -2367,9 +2321,9 @@ provided in NuttX-7.2.</p></li>
 <li><p><strong>NuttX-8.1</strong>. Along with TM4C123AH6PM support, Nathan Hartman also
 reinstated and extended the Tiva Quadrature Encoder driver.</p></li>
 </ul>
-</div>
-<div class="section" id="ti-tiva-tm4c1294">
-<h3>TI/Tiva TM4C1294<a class="headerlink" href="#ti-tiva-tm4c1294" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ti-tiva-tm4c1294">
+<h3>TI/Tiva TM4C1294<a class="headerlink" href="#ti-tiva-tm4c1294" title="Permalink to this headline"></a></h3>
 <p>This port uses the TI Tiva C Series TM4C1294 Connected
 LaunchPad <a class="reference external" href="http://www.ti.com/tool/ek-tm4c1294xl">(EK-TM4C1294XL)</a>.</p>
 <p><strong>STATUS:</strong></p>
@@ -2384,11 +2338,27 @@ TM4C129X</a>.</p></li>
 NuttX-7.25.</p></li>
 </ul>
 <p>Refer to the EK-TM4C1294XL board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/tiva/tm4c1294-launchpad/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/tiva/tm4c1294-launchpad/README.txt">README</a>
 file for more detailed information about this port.</p>
-</div>
-<div class="section" id="ti-tiva-tm4c129x">
-<h3>TI/Tiva TM4C129X<a class="headerlink" href="#ti-tiva-tm4c129x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ti-tiva-tm4c129e">
+<h3>TI/Tiva TM4C129E<a class="headerlink" href="#ti-tiva-tm4c129e" title="Permalink to this headline"></a></h3>
+<p>This port uses the TI Tiva C Series TM4C129E Crypto Connected
+LaunchPad <a class="reference external" href="https://www.ti.com/tool/EK-TM4C129EXL">(EK-TM4C129EXL)</a>.</p>
+<p><strong>STATUS:</strong></p>
+<ul class="simple">
+<li><p>Support for the EK-TM4C129EXL is based on support for the similar
+EK-TM4C1294XL. This basic board support includes a configuration
+for the NuttShell <a class="reference internal" href="../applications/nsh/nsh.html#nsh"><span class="std std-ref">NSH</span></a>), a configuration for testing
+IPv6, and a configuration for testing the RTOS using the ostest
+example in the NuttX apps repository.</p></li>
+</ul>
+<p>Refer to the EK-TM4C129EXL board
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/tiva/tm4c129e-launchpad/README.txt">README</a>
+file for more detailed information about this port.</p>
+</section>
+<section id="ti-tiva-tm4c129x">
+<h3>TI/Tiva TM4C129X<a class="headerlink" href="#ti-tiva-tm4c129x" title="Permalink to this headline"></a></h3>
 <p>This port uses the TI Tiva C Series TM4C129X Connected
 Development Kit <a class="reference external" href="http://www.ti.com/tool/dk-tm4c129x">(DK-TM4C129X)</a>.</p>
 <p><strong>STATUS:</strong></p>
@@ -2403,17 +2373,17 @@ major difficulty.</p></li>
 (<a class="reference internal" href="../applications/nsh/nsh.html#nsh"><span class="std std-ref">NSH</span></a>). Both
 are networked enabled: One configured to support IPv4 and one
 configured to supported IPv6. Instructions are included in the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/tiva/dk-tm4c129x/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/tiva/dk-tm4c129x/README.txt">README</a>
 file for configuring both IPv4 and IPv6 simultaneously.</p></li>
 <li><p>Tiva PWM and Quadrature Encoder drivers were contributed to NuttX in
 7.18 by Young.</p></li>
 </ul>
 <p>Refer to the DK-TM4C129X board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/tiva/dk-tm4c129x/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/tiva/dk-tm4c129x/README.txt">README</a>
 file for more detailed information about this port.</p>
-</div>
-<div class="section" id="ti-simplelink-cc13x2">
-<h3>TI/SimpleLink CC13x2<a class="headerlink" href="#ti-simplelink-cc13x2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ti-simplelink-cc13x2">
+<h3>TI/SimpleLink CC13x2<a class="headerlink" href="#ti-simplelink-cc13x2" title="Permalink to this headline"></a></h3>
 <p>Basic, unverified architectural support for the
 CC13x2 was added in NuttX-7.28. Fragmentary support for very similar
 CC26x2 family is included. This is a work in progress and, with any
@@ -2423,9 +2393,9 @@ currently code complete (minus some ROM <em>DriverLib</em> hooks) but untested.<
 LaunchXL-CC1312R1 board is in place. Board bring-up, however, cannot be
 done until the the basic CC13x2 architecture support is complete,
 hopefully in NuttX-7.29.</p>
-</div>
-<div class="section" id="microchip-sam4l">
-<h3>Microchip SAM4L<a class="headerlink" href="#microchip-sam4l" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-sam4l">
+<h3>Microchip SAM4L<a class="headerlink" href="#microchip-sam4l" title="Permalink to this headline"></a></h3>
 <p>This port uses the Microchip SAM4L Xplained Pro development
 board. This board features the ATSAM4LC4C MCU running at 48MHz with
 256KB of FLASH and 32KB of internal SRAM.</p>
@@ -2441,7 +2411,7 @@ Support for the SAM4L Xplained modules was added in NuttX-6.29:</p>
 module</p></li>
 </ul>
 <p>Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/sam34/sam4l-xplained/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/sam34/sam4l-xplained/README.txt">README</a>
 file for further information.</p>
 <p><strong>Memory Usage</strong>. The ATSAM4LC4C comes in a 100-pin package and has
 256KB FLASH and 32KB of SRAM. Below is the current memory usage for the
@@ -2457,9 +2427,9 @@ runtime memory usage includes the static memory usage <em>plus</em> all dynamic
 memory allocation for things like stacks and I/O buffers:</p>
 <p>You can see that 22.8KB (71.1%) of the SRAM heap is still available for
 further application development while NSH is running.</p>
-</div>
-<div class="section" id="microchip-sam4cm">
-<h3>Microchip SAM4CM<a class="headerlink" href="#microchip-sam4cm" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-sam4cm">
+<h3>Microchip SAM4CM<a class="headerlink" href="#microchip-sam4cm" title="Permalink to this headline"></a></h3>
 <p>General architectural support was provided for SAM4CM
 family in NuttX 7.3 This was <em>architecture-only</em> support, meaning that
 support for the boards with these chips is available, but no support for
@@ -2472,11 +2442,11 @@ to NuttX by Masayuki Ishikawa in NuttX-7.19. The SAM4CM is a dual-CPU
 part and SMP was included for the ARMv7-M and SAM3/4 families. The
 SAM4CMP-DB board support includes an NSH configuration that operates in
 an SMP configuration. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/sam34/sam4cmp-db/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/sam34/sam4cmp-db/README.txt">README</a>
 file for further information.</p>
-</div>
-<div class="section" id="microchip-sam4e">
-<h3>Microchip SAM4E<a class="headerlink" href="#microchip-sam4e" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-sam4e">
+<h3>Microchip SAM4E<a class="headerlink" href="#microchip-sam4e" title="Permalink to this headline"></a></h3>
 <p>General architectural support was provided for the SAM4E
 family in NuttX 6.32. This was <em>architecture-only</em> support, meaning that
 support for the boards with these chips is available, but no support for
@@ -2487,9 +2457,9 @@ board in NuttX 7.1. A fully functional NuttShell (NSH) configuration is
 available (see <a class="reference internal" href="../applications/nsh/nsh.html#nsh"><span class="std std-ref">NSH</span></a>). That NSH
 configuration includes networking support and support for an AT25 Serial
 FLASH file system.</p>
-</div>
-<div class="section" id="microchip-sam4s">
-<h3>Microchip SAM4S<a class="headerlink" href="#microchip-sam4s" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-sam4s">
+<h3>Microchip SAM4S<a class="headerlink" href="#microchip-sam4s" title="Permalink to this headline"></a></h3>
 <p>There are ports to two Microchip SAM4S board:</p>
 <ul class="simple">
 <li><p>There is a port the Microchip SAM4S Xplained development board. This
@@ -2516,12 +2486,12 @@ devkitARM), or 4) Native Windows. A DIY toolchain for Linux or Cygwin is
 provided by the NuttX
 <a class="reference external" href="https://bitbucket.org/nuttx/buildroot/downloads/">buildroot</a>
 package.</p>
-</div>
-</div>
-<div class="section" id="arm-cortex-m7">
-<h2>ARM Cortex-M7<a class="headerlink" href="#arm-cortex-m7" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="microchip-samv71">
-<h3>Microchip SAMV71<a class="headerlink" href="#microchip-samv71" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="arm-cortex-m7">
+<h2>ARM Cortex-M7<a class="headerlink" href="#arm-cortex-m7" title="Permalink to this headline"></a></h2>
+<section id="microchip-samv71">
+<h3>Microchip SAMV71<a class="headerlink" href="#microchip-samv71" title="Permalink to this headline"></a></h3>
 <p>This port uses Microchip SAM V71 Xplained Ultra Evaluation Kit
 (SAMV71-XULT). This board features the ATSAMV71Q21 Cortex-M7
 microcontroller. Refer to the <a class="reference external" href="http://www.atmel.com/tools/atsamv71-xult.aspx">Microchip web
@@ -2573,21 +2543,21 @@ well tested).</p></li>
 <li><p>RSWDT driver.</p></li>
 </ul>
 <p>Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/samv7/samv71-xult/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/samv7/samv71-xult/README.txt">README</a>
 file for further information.</p>
-</div>
-<div class="section" id="microchip-same70">
-<h3>Microchip SAME70<a class="headerlink" href="#microchip-same70" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-same70">
+<h3>Microchip SAME70<a class="headerlink" href="#microchip-same70" title="Permalink to this headline"></a></h3>
 <p>This port uses Microchip SAM E70 Xplained Evaluation Kit
 (ATSAME70-XPLD). This board is essentially a lower cost version of the
 SAMV71-XULT board featuring the ATSAME70Q21 Cortex-M7 microcontroller.
 See the <a class="reference external" href="#at91samv71">Microchip SAMV71</a> for supported features. Also
 refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/samv7/same70-xplained/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/samv7/same70-xplained/README.txt">README</a>
 file for further information.</p>
-</div>
-<div class="section" id="microchip-samd5x-e5x">
-<h3>Microchip SAMD5x/E5x<a class="headerlink" href="#microchip-samd5x-e5x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-samd5x-e5x">
+<h3>Microchip SAMD5x/E5x<a class="headerlink" href="#microchip-samd5x-e5x" title="Permalink to this headline"></a></h3>
 <p>The port of NuttX to Adafruit Metro M4 development
 board was released with NuttX-7/26. This board is essentially a advanced
 version of the Adafruit Metro board based on the SAMD21, but upgraded to
@@ -2604,21 +2574,21 @@ boost.</p>
 in from the SAML21 port. Most have not been verified as of the
 NuttX-7.26 release. These unverfied drivers include: SPI, I2C, DMA, USB.
 Also refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/samd5e5/metro-m4/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/samd5e5/metro-m4/README.txt">README</a>
 file for further information about the current state of the port.</p>
 <p>NuttX-9.0 added basic support for Microchip SAME54 Xplained Pro board.
 An ethernet driver was also added to the SAME5x family.</p>
-</div>
-<div class="section" id="stmicro-stm32-f72x-f73x">
-<h3>STMicro STM32 F72x/F73x<a class="headerlink" href="#stmicro-stm32-f72x-f73x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f72x-f73x">
+<h3>STMicro STM32 F72x/F73x<a class="headerlink" href="#stmicro-stm32-f72x-f73x" title="Permalink to this headline"></a></h3>
 <p>Support for the F72x/F73x family was provided
 by Bob Feretich in NuttX-7.23. A single board is supported in this
 family:</p>
 <p><strong>STATUS</strong>: See <a class="reference external" href="#stm32f7drivers">below</a> for STM32 F7 driver
 availability.</p>
-</div>
-<div class="section" id="stmicro-stm32-f745-f746">
-<h3>STMicro STM32 F745/F746<a class="headerlink" href="#stmicro-stm32-f745-f746" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f745-f746">
+<h3>STMicro STM32 F745/F746<a class="headerlink" href="#stmicro-stm32-f745-f746" title="Permalink to this headline"></a></h3>
 <p>Three boards are supported for this MCU:</p>
 <ol class="arabic simple">
 <li><p><strong>STM32F746G Discovery</strong>. One port uses the STMicro STM32F746G-DISCO
@@ -2654,17 +2624,17 @@ UID access from Valmantas Paliksa. USB High speed driver was added
 for STM32F7 series by Ramtin Amin.</p></li>
 <li><p><strong>NuttX-9.0</strong>. Added serial DMA support.</p></li>
 </ul>
-</div>
-<div class="section" id="stmicro-stm32-f756">
-<h3>STMicro STM32 F756<a class="headerlink" href="#stmicro-stm32-f756" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f756">
+<h3>STMicro STM32 F756<a class="headerlink" href="#stmicro-stm32-f756" title="Permalink to this headline"></a></h3>
 <p>Architecture-only support is available for the STM32
 F756 family (meaning that the parts are supported, but there is no
 example board supported in the system). This support was made available
 in NuttX-7.11. See <a class="reference external" href="#stm32f7drivers">above</a> for STM32 F7 driver
 availability.</p>
-</div>
-<div class="section" id="stmicro-stm32-f76xx-f77xx">
-<h3>STMicro STM32 F76xx/F77xx<a class="headerlink" href="#stmicro-stm32-f76xx-f77xx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-f76xx-f77xx">
+<h3>STMicro STM32 F76xx/F77xx<a class="headerlink" href="#stmicro-stm32-f76xx-f77xx" title="Permalink to this headline"></a></h3>
 <p>Architecture support for the STM32 F76xx and
 F77xx families was contributed by David Sidrane in NuttX 7.17. Support
 is available for two boards from this family:</p>
@@ -2672,7 +2642,7 @@ is available for two boards from this family:</p>
 <li><p><strong>Nucleo-F767ZI</strong>. This is a member of the Nucleo-144 board family.
 Support for this board was also contributed by David Sidrane in
 NuttX-7.17. See the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32f7/nucleo-144/README.txt">README.txt</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32f7/nucleo-144/README.txt">README.txt</a>
 file for further information.</p></li>
 <li><p><strong>STM32F76I-DISCO</strong>. Support for the STM32F76I-DISCO was contributed
 by Titus von Boxberg in NuttX-7.22. The STMicro STM32F769I-DISCO
@@ -2697,22 +2667,22 @@ SRAM. The board features:</p>
 </ul>
 <p>Refer to the <a class="reference external" href="http://www.st.com">http://www.st.com</a> website for further information about
 this board (search keyword: stm32f769i-disco). See also the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32f7/nucleo-144/README.txt">README.txt</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32f7/nucleo-144/README.txt">README.txt</a>
 file for further information.</p>
 </li>
 </ul>
 <p><strong>STATUS</strong>: See <a class="reference external" href="#stm32f7drivers">above</a> for STM32 F7 driver
 availability.</p>
-</div>
-<div class="section" id="stmicro-stm32-h7x3">
-<h3>STMicro STM32 H7x3<a class="headerlink" href="#stmicro-stm32-h7x3" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stmicro-stm32-h7x3">
+<h3>STMicro STM32 H7x3<a class="headerlink" href="#stmicro-stm32-h7x3" title="Permalink to this headline"></a></h3>
 <p>Architecture support for the STM32 H7x3 was added
 through efforts of several people in NuttX-7.26. Support is available
 for one board from this family:</p>
 <ul>
 <li><p><strong>Nucleo-H743ZI</strong>. This is a member of the Nucleo-144 board family.
 Support for this board was added in NuttX-7.26. See the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32h7/nucleo-h743zi/README.txt">README.txt</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32h7/nucleo-h743zi/README.txt">README.txt</a>
 file for further information.</p>
 <p>The basic NSH configuration is fully, thanks to the bring-up efforts
 of Mateusz Szafoni. This port is still a work in progress and
@@ -2720,7 +2690,7 @@ additional drivers are being ported from the F7 family.</p>
 </li>
 <li><p><strong>STMicro STM32H747I-DISCO</strong>. Support for this board was added in
 NuttX-9.0. See the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/stm32h7/stm32h747i-disco/README.txt">README.txt</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/stm32h7/stm32h747i-disco/README.txt">README.txt</a>
 file for further information.</p>
 <p>This port is still a work in progress.</p>
 </li>
@@ -2732,9 +2702,9 @@ David Sidrane.</p>
 <p><strong>NuttX-8.2</strong>. Added support for SDMMC and FLASH progmem. From David
 Sidrane.</p>
 <p><strong>NuttX-9.0</strong>. Added QSPI support for the STM32H7.</p>
-</div>
-<div class="section" id="nxp-freescale-i-mx-rt">
-<h3>NXP/Freescale i.MX RT<a class="headerlink" href="#nxp-freescale-i-mx-rt" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nxp-freescale-i-mx-rt">
+<h3>NXP/Freescale i.MX RT<a class="headerlink" href="#nxp-freescale-i-mx-rt" title="Permalink to this headline"></a></h3>
 <p>The initial port to the IMXRT1050-EVKB featuring
 the MIMXRT1052DVL6A <em>Crossover</em> MCU was included initially in
 NuttX-7.25. The initial port was the joint effort of Janne Rosberg, Ivan
@@ -2747,12 +2717,12 @@ NuttX-7.27.</p>
 <ul class="simple">
 <li><p>The basic IMXRT1050-EVK port is complete and verified configurations
 are available. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/imxrt/imxrt1050-evk/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/imxrt/imxrt1050-evk/README.txt">README</a>
 file for further information.</p></li>
 <li><p>The basic IMXRT1060-EVK port was complete but un-verified as of
 NuttX-7.27 but has been fully verified since NuttX-7.27 Refer to the
 NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/imxrt/imxrt1060-evk/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/imxrt/imxrt1060-evk/README.txt">README</a>
 file for more current status information.</p></li>
 <li><p>Architecture-only support for the IMXRT1020 family was contributed in
 NuttX-7.30 by Dave Marples.</p></li>
@@ -2760,10 +2730,10 @@ NuttX-7.30 by Dave Marples.</p></li>
 configurations in NuttX-8.2. This is again the work of Dave Marples.
 The initial release includes <em>nsh</em>, <em>netnsh</em>, and <em>usdhc</em>
 configurations. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/imxrt/imxrt1020-evk/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/imxrt/imxrt1020-evk/README.txt">README</a>
 file for further information.</p></li>
 <li><p>The basic Teensy-4.x port is complete. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/arm/imxrt/teensy-4.x/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/arm/imxrt/teensy-4.x/README.txt">README</a>
 file for further information.</p></li>
 </ul>
 <p><strong>i.MX RT Driver Status:</strong></p>
@@ -2790,37 +2760,37 @@ Balzano.</p>
 recommended for the Cortex-M7 as for the Cortex-M4. It would be wise to
 use the latest GNU toolchains for this part because as of this writing
 (2015-02-09), support for the Cortex-M7 is a very new GCC feature.</p>
-</div>
-</div>
-<div class="section" id="microchip-avr">
-<h2>Microchip AVR<a class="headerlink" href="#microchip-avr" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="avr-atmega">
-<h3>AVR ATMega<a class="headerlink" href="#avr-atmega" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="avr-atmega128">
-<h3>AVR ATMega128<a class="headerlink" href="#avr-atmega128" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="microchip-avr">
+<h2>Microchip AVR<a class="headerlink" href="#microchip-avr" title="Permalink to this headline"></a></h2>
+<section id="avr-atmega">
+<h3>AVR ATMega<a class="headerlink" href="#avr-atmega" title="Permalink to this headline"></a></h3>
+</section>
+<section id="avr-atmega128">
+<h3>AVR ATMega128<a class="headerlink" href="#avr-atmega128" title="Permalink to this headline"></a></h3>
 <p>This port of NuttX to the Amber Web Server from
 <a class="reference external" href="http://www.soc-robotics.com/index.htm">SoC Robotics</a> is partially
 completed. The Amber Web Server is based on an Microchip ATMega128.</p>
-</div>
-<div class="section" id="avr-atmega1284p">
-<h3>AVR ATMega1284P<a class="headerlink" href="#avr-atmega1284p" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="avr-atmega1284p">
+<h3>AVR ATMega1284P<a class="headerlink" href="#avr-atmega1284p" title="Permalink to this headline"></a></h3>
 <p>LowPowerLab MoteinoMEGA. This port of NuttX to the MoteinoMEGA from
 <a class="reference external" href="http://www.lowpowerlab.com">LowPowerLab</a>. The MoteinoMEGA is based
 on an Microchip ATMega1284P. See the LowPowerlab
 <a class="reference external" href="https://lowpowerlab.com/shop/index.php?_route_=Moteino/moteinomega">website</a>
 and the board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/avr/atmega/moteino-mega/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/avr/atmega/moteino-mega/README.txt">README</a>
 file for further information.</p>
-</div>
-<div class="section" id="avr-atmega2560">
-<h3>AVR ATMega2560<a class="headerlink" href="#avr-atmega2560" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="avr-atmega2560">
+<h3>AVR ATMega2560<a class="headerlink" href="#avr-atmega2560" title="Permalink to this headline"></a></h3>
 <p>Extension of the AVR architecture to support the
 ATMega2560 and specifi support for the Arduion MEGA2560 board were
 contributed by Dimitry Kloper and first released in NuttX-7.14.</p>
-</div>
-<div class="section" id="avr-at90usb64x-and-at90usb6128x">
-<h3>AVR AT90USB64x and AT90USB6128x<a class="headerlink" href="#avr-at90usb64x-and-at90usb6128x" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="avr-at90usb64x-and-at90usb6128x">
+<h3>AVR AT90USB64x and AT90USB6128x<a class="headerlink" href="#avr-at90usb64x-and-at90usb6128x" title="Permalink to this headline"></a></h3>
 <p><strong>Micropendous 3 AT90USB64x</strong> and <strong>AT90USB6128x</strong>. This port of NuttX
 to the Opendous Micropendous 3 board. The Micropendous3 is may be
 populated with an AT90USB646, 647, 1286, or 1287. I have only the
@@ -2857,10 +2827,10 @@ performed using the NuttX DIY toolchain for Linux or Cygwin is provided
 by the NuttX
 <a class="reference external" href="https://bitbucket.org/nuttx/buildroot/downloads/">buildroot</a>
 package. As a result, that toolchain is recommended.</p>
-</div>
-</div>
-<div class="section" id="microchip-avr32">
-<h2>Microchip AVR32<a class="headerlink" href="#microchip-avr32" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="microchip-avr32">
+<h2>Microchip AVR32<a class="headerlink" href="#microchip-avr32" title="Permalink to this headline"></a></h2>
 <p>AV32DEV1. This port uses the www.mcuzone.com AVRDEV1 board based on the
 Microchip AT32UC3B0256 MCU. This port requires a special GNU avr32 toolchain
 available from atmel.com website. This is a windows native toolchain and
@@ -2886,11 +2856,11 @@ have the MAX232 connected wrong).</p></li>
 include drivers for additional AVR32 UC3 devices – like SPI and USB —
 and will be available in a later release, time permitting. Refer to the
 NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/avr/at32uc3/avr32dev1/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/avr/at32uc3/avr32dev1/README.txt">README</a>
 file for further information.</p>
-</div>
-<div class="section" id="misoc">
-<h2>Misoc<a class="headerlink" href="#misoc" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="misoc">
+<h2>Misoc<a class="headerlink" href="#misoc" title="Permalink to this headline"></a></h2>
 <p>Misoc LM32 Architectural Support. Architectural support for the Misoc
 LM32 was contributed by Ramtin Amin in NuttX 7.19</p>
 <p>Minerva. Architectural support for the Misoc Minoerva was contributed by
@@ -2898,16 +2868,16 @@ Ramtin Amin in NuttX 7.29.</p>
 <p><strong>Drivers</strong>. Driver support is basic in these initial releases: Serial,
 Timer, and Ethernet. “Board” support is a available for developing with
 Misoc LM32 under Qemu or on your custom FPGA.</p>
-</div>
-<div class="section" id="openrisc-mor1kx">
-<h2>OpenRISC mor1kx<a class="headerlink" href="#openrisc-mor1kx" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="openrisc-mor1kx">
+<h2>OpenRISC mor1kx<a class="headerlink" href="#openrisc-mor1kx" title="Permalink to this headline"></a></h2>
 <p><strong>OpenRISC mor1kx Architectural Support</strong>. Architectural support for the
 OpenRISC mor1kx was developed by Matt Thompson Amin and released in
 NuttX 7.25. Currently only an mor1kx Qemu simulation is available for
 testing.</p>
-</div>
-<div class="section" id="freescale-m68hcs12">
-<h2>Freescale M68HCS12<a class="headerlink" href="#freescale-m68hcs12" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="freescale-m68hcs12">
+<h2>Freescale M68HCS12<a class="headerlink" href="#freescale-m68hcs12" title="Permalink to this headline"></a></h2>
 <p><strong>MC9S12NE64</strong>. Support for the MC9S12NE64 MCU and two boards are
 included:</p>
 <ul class="simple">
@@ -2918,9 +2888,9 @@ included:</p>
 NuttX <a class="reference external" href="https://bitbucket.org/nuttx/buildroot/downloads/">buildroot</a>
 provides a properly patched GCC 3.4.4 toolchain that is highly optimized
 for the m9s12x family.</p>
-</div>
-<div class="section" id="intel-80x86">
-<h2>Intel 80x86<a class="headerlink" href="#intel-80x86" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="intel-80x86">
+<h2>Intel 80x86<a class="headerlink" href="#intel-80x86" title="Permalink to this headline"></a></h2>
 <p><strong>QEMU/Bifferboard i486</strong>. This port uses the
 <a class="reference external" href="http://wiki.qemu.org/Main_Page">QEMU</a> i486 and the native Linux,
 Cygwin, MinGW the GCC toolchain under Linux or Cygwin.</p>
@@ -2931,7 +2901,7 @@ examples under QEMU. The port is reported to be functional on the
 Lizhuoyi contributed additional keyboard and VGA drivers. This is a
 great, stable starting point for anyone interested in fleshing out the
 x86 port! Refer to the NuttX
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/x86/qemu/qemu-i486/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/x86/qemu/qemu-i486/README.txt">README</a>
 file for further information.</p>
 <p><strong>QEMU/Intel64</strong> An x86_64 flat address port was ported in NuttX-9.0. It
 consists of the following feautres:</p>
@@ -2962,20 +2932,20 @@ consists of the following feautres:</p>
 <li><p>Qemu/KVM on a Xeon 2630v4 machine.</p></li>
 <li><p>Bochs with broadwell_ult emulation.</p></li>
 </ul>
-</div>
-<div class="section" id="microchip-pic32mx">
-<h2>Microchip PIC32MX<a class="headerlink" href="#microchip-pic32mx" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="microchip-pic32mx">
+<h2>Microchip PIC32MX<a class="headerlink" href="#microchip-pic32mx" title="Permalink to this headline"></a></h2>
 <p>(MIPS M4K architecture)</p>
-<div class="section" id="microchip-pic32mx2xx">
-<h3>Microchip PIC32MX2xx<a class="headerlink" href="#microchip-pic32mx2xx" title="Permalink to this headline">¶</a></h3>
+<section id="microchip-pic32mx2xx">
+<h3>Microchip PIC32MX2xx<a class="headerlink" href="#microchip-pic32mx2xx" title="Permalink to this headline"></a></h3>
 <p>A port is in progress from the DTX1-4000L “Mirtoo”
 module from <a class="reference external" href="http://www.dimitech.com/">Dimitech</a>. This module uses
 Microchip PIC32MX250F128D and the Dimitech DTX1-4000L EV-kit1 V2. See
 the <a class="reference external" href="http://www.dimitech.com/">Dimitech</a> website for further
 information.</p>
-</div>
-<div class="section" id="microchip-pic32mx4xx">
-<h3>Microchip PIC32MX4xx<a class="headerlink" href="#microchip-pic32mx4xx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-pic32mx4xx">
+<h3>Microchip PIC32MX4xx<a class="headerlink" href="#microchip-pic32mx4xx" title="Permalink to this headline"></a></h3>
 <p><strong>PIC32MX440F512H</strong>. This port uses the “Advanced USB Storage Demo
 Board,” Model DB-DP11215, from <a class="reference external" href="http://www.sureelectronics.net">Sure
 Electronics</a>. This board features the
@@ -2995,9 +2965,9 @@ replaced with this <a class="reference external" href="http://www.sparkfun.com/p
 board</a>. See also the
 <a class="reference external" href="http://www.schmalzhaus.com/UBW32/">UBW32</a> web site.</p></li>
 </ul>
-</div>
-<div class="section" id="microchip-pic32mx7xx">
-<h3>Microchip PIC32MX7xx<a class="headerlink" href="#microchip-pic32mx7xx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-pic32mx7xx">
+<h3>Microchip PIC32MX7xx<a class="headerlink" href="#microchip-pic32mx7xx" title="Permalink to this headline"></a></h3>
 <p>PIC32MX795F512L. There one two board ports using this chip:</p>
 <ul class="simple">
 <li><p><strong>Microchip PIC32 Ethernet Starter Kit</strong>. This port uses the
@@ -3017,9 +2987,9 @@ from the <a class="reference external" href="http://www.microchip.com">Microchip
 <li><p>The MIPS SDE toolchain available from the <a class="reference external" href="http://www.mentor.com">Mentor
 Graphics</a> website.</p></li>
 </ol>
-</div>
-<div class="section" id="microchip-pic32mzec">
-<h3>Microchip PIC32MZEC<a class="headerlink" href="#microchip-pic32mzec" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="microchip-pic32mzec">
+<h3>Microchip PIC32MZEC<a class="headerlink" href="#microchip-pic32mzec" title="Permalink to this headline"></a></h3>
 <p>PIC32MZEC Family (MIPS microAptiv). A port is in available for the
 PIC32MZ Embedded Connectivity (EC) Starter Kit. There are two
 configurations of the Microchip PIC32MZ EC Starter Kit:</p>
@@ -3034,10 +3004,10 @@ information.</p>
 <p>This was a collaborative effort between Kristopher Tate, David Sidrane
 and myself. The basic port is functional and a NuttShell (NSH)
 configuration is available.</p>
-</div>
-</div>
-<div class="section" id="microchip-pic32mzef">
-<h2>Microchip PIC32MZEF<a class="headerlink" href="#microchip-pic32mzef" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="microchip-pic32mzef">
+<h2>Microchip PIC32MZEF<a class="headerlink" href="#microchip-pic32mzef" title="Permalink to this headline"></a></h2>
 <p>(MIPS M5150 architecture).</p>
 <p>A port is in available for the MikroElectronika <a class="reference external" href="https://www.mikroe.com/flipclick-pic32mz">Flip&amp;Click
 PIC32MZ</a> development board
@@ -3063,17 +3033,17 @@ timers.</p>
 <p><strong>NuttX-7.31</strong>. Abdelatif Guettouche contributed DMA support.</p>
 <p><strong>NuttX-9.0</strong>. Cache operations were implemented.</p>
 <p>Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/mips/pic32mz/pic32mz-starterkit/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/mips/pic32mz/pic32mz-starterkit/README.txt">README</a>
 file for further information.</p>
 <p><strong>Development Environment:</strong> Same as for the PIC32MZ.</p>
-</div>
-<div class="section" id="renesas-hitachi-superh">
-<h2>Renesas/Hitachi SuperH<a class="headerlink" href="#renesas-hitachi-superh" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="renesas-hitachi-superh">
+<h2>Renesas/Hitachi SuperH<a class="headerlink" href="#renesas-hitachi-superh" title="Permalink to this headline"></a></h2>
 <p><strong>SH-1 SH7032</strong>. This port uses the Hitachi SH-1 Low-Cost Evaluation
 Board (SH1_LCEVB1), US7032EVB, with a GNU ELF toolchain* under Linux or
 Cygwin.</p>
-<div class="section" id="renesas-m16c-26">
-<h3>Renesas M16C/26<a class="headerlink" href="#renesas-m16c-26" title="Permalink to this headline">¶</a></h3>
+<section id="renesas-m16c-26">
+<h3>Renesas M16C/26<a class="headerlink" href="#renesas-m16c-26" title="Permalink to this headline"></a></h3>
 <p><strong>Renesas M16C/26 Microcontroller</strong>. This port uses the Renesas SKP16C26
 Starter kit and the GNU M32C toolchain. The development environment is
 either Linux or Cygwin under WinXP.</p>
@@ -3083,11 +3053,11 @@ GNU <code class="docutils literal notranslate"><span class="pre">m16c-nuttx-elf-
 <p>Where the reference line is:</p>
 <p>No workaround is known at this time. This is a show stopper for M16C.
 Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/renesas/m16c/skp16c26/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/renesas/m16c/skp16c26/README.txt">README</a>
 file for further information.</p>
-</div>
-<div class="section" id="renesas-rx65n">
-<h3>Renesas RX65N<a class="headerlink" href="#renesas-rx65n" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="renesas-rx65n">
+<h3>Renesas RX65N<a class="headerlink" href="#renesas-rx65n" title="Permalink to this headline"></a></h3>
 <p>Support for the Renesas RX65N family was released in NuttX with a
 contribution from Anjana. Two boards are supported in this initial
 release:</p>
@@ -3100,45 +3070,71 @@ release:</p>
 <li><p><strong>NuttX-8.2</strong></p></li>
 <li><p><strong>NuttX-9.0</strong> RTC driver for the RX65N was added.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="risc-v">
-<h2>RISC-V<a class="headerlink" href="#risc-v" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="risc-v">
+<h2>RISC-V<a class="headerlink" href="#risc-v" title="Permalink to this headline"></a></h2>
 <p>RISC-V Architectural Support. Basic support for the RISC-V architecture
 was contributed by Ken Pettit in NuttX-7.19.</p>
 <p><a class="reference external" href="#k210">Sipeed Maix bit</a></p>
 <p>Initial support for the Sipeed Maix bit board was added in NuttX-9.0.</p>
-<div class="section" id="litex-on-arty-a7">
-<h3>LiteX on ARTY A7<a class="headerlink" href="#litex-on-arty-a7" title="Permalink to this headline">¶</a></h3>
+<section id="litex-on-arty-a7">
+<h3>LiteX on ARTY A7<a class="headerlink" href="#litex-on-arty-a7" title="Permalink to this headline"></a></h3>
 <p>Support for the Digilent ARTY_A7 board along with CPU VexRiscV SOC were
 added in NuttX-9.0.</p>
-</div>
-</div>
-<div class="section" id="esp32-dual-xtensa-lx6">
-<h2>ESP32 (Dual Xtensa LX6)<a class="headerlink" href="#esp32-dual-xtensa-lx6" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="xtensa-lx6-esp32">
-<h3>Xtensa LX6 ESP32<a class="headerlink" href="#xtensa-lx6-esp32" title="Permalink to this headline">¶</a></h3>
-<p>Basic architectural support for Xtensa LX6 processors and the port for
-the Espressif ESP32 were added in NuttX-7.19. The basic ESP32 port is
-function in both single CPU and dual CPU SMP configurations.</p>
+</section>
+<section id="esp32-c3">
+<h3>ESP32-C3<a class="headerlink" href="#esp32-c3" title="Permalink to this headline"></a></h3>
+<p>Initial architectural support for ESP32-C3 (RISC-V) was added in NuttX-10.1.0</p>
+<p><strong>Espressif ESP32-C3 Devkit Board</strong> The NuttX release includes support for
+Espressif ESP32-C3 Devkit board.</p>
+<p>Please, refer to the <a class="reference internal" href="../platforms/risc-v/esp32c3/index.html"><span class="doc">ESP32-C3</span></a> on NuttX for
+further information.</p>
+</section>
+</section>
+<section id="esp32-dual-xtensa-lx6">
+<h2>ESP32 (Dual Xtensa LX6)<a class="headerlink" href="#esp32-dual-xtensa-lx6" title="Permalink to this headline"></a></h2>
+<section id="xtensa-lx6-esp32">
+<h3>Xtensa LX6 ESP32<a class="headerlink" href="#xtensa-lx6-esp32" title="Permalink to this headline"></a></h3>
+<p>Initial architectural support for Xtensa LX6 processors for the Espressif
+ESP32 was added in NuttX-7.19, enabling both single CPU and dual CPU
+SMP configurations.</p>
 <p><strong>Espressif ESP32 DevkitC V4 Board</strong> The NuttX release includes support for
 Espressif ESP32 DevkitC V4 board. There is an NSH configuration for each
 CPU configuration and an OS test configuration for verification of the
 port.</p>
-<p><strong>STATUS</strong>. ESP32 support in NuttX-7.19 is functional, but very
-preliminary. There is little yet in the way of device driver support.
-Outstanding issues include missing clock configuration logic, missing
-partition tables to support correct configuration from FLASH, and some
-serial driver pin configuration issues. The configuration is usable
-despite these limitations. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/xtensa/esp32/esp32-devkitc/README.txt">README</a>
-file for further information.</p>
-<p>Release NuttX-10.0.0 brought a bunch of additions to the ESP32 port.  This
+<p><strong>STATUS</strong>. Release NuttX-10.0.0 brought a bunch of additions to the ESP32 port.  This
 includes: I2C, SPI, RTC, PM, Timers, Watchdog Timer and Ethernet.</p>
-</div>
-</div>
-<div class="section" id="zilog-zneo-z16f">
-<h2>Zilog ZNEO Z16F<a class="headerlink" href="#zilog-zneo-z16f" title="Permalink to this headline">¶</a></h2>
+<p>Please, refer to the <a class="reference internal" href="../platforms/xtensa/esp32/index.html"><span class="doc">ESP32</span></a> on NuttX for
+further information.</p>
+</section>
+</section>
+<section id="esp32-s2-single-xtensa-lx7">
+<h2>ESP32-S2 (Single Xtensa LX7)<a class="headerlink" href="#esp32-s2-single-xtensa-lx7" title="Permalink to this headline"></a></h2>
+<section id="xtensa-lx7-esp32-s2">
+<h3>Xtensa LX7 ESP32-S2<a class="headerlink" href="#xtensa-lx7-esp32-s2" title="Permalink to this headline"></a></h3>
+<p>Initial architectural support for Xtensa LX7 processor for the Espressif
+ESP32-S2 was added in NuttX-10.2.</p>
+<p><strong>Espressif ESP32-S2 Saola V1 Board</strong> The NuttX release includes support for
+Espressif ESP32-S2 Saola V1 board.</p>
+<p>Please, refer to the <a class="reference internal" href="../platforms/xtensa/esp32s2/index.html"><span class="doc">ESP32-S2</span></a> on NuttX for
+further information.</p>
+</section>
+</section>
+<section id="esp32-s3-dual-xtensa-lx7">
+<h2>ESP32-S3 (Dual Xtensa LX7)<a class="headerlink" href="#esp32-s3-dual-xtensa-lx7" title="Permalink to this headline"></a></h2>
+<section id="xtensa-lx7-esp32-s3">
+<h3>Xtensa LX7 ESP32-S3<a class="headerlink" href="#xtensa-lx7-esp32-s3" title="Permalink to this headline"></a></h3>
+<p>Initial architectural support for dual Xtensa LX7 processors for the Espressif
+ESP32-S3 was added in NuttX-10.3.</p>
+<p><strong>Espressif ESP32-S3 DevKit Board</strong> The NuttX release includes support for
+Espressif ESP32-S3 DevKit board.</p>
+<p>Please, refer to the <a class="reference internal" href="../platforms/xtensa/esp32s3/index.html"><span class="doc">ESP32-S3</span></a> on NuttX for
+further information.</p>
+</section>
+</section>
+<section id="zilog-zneo-z16f">
+<h2>Zilog ZNEO Z16F<a class="headerlink" href="#zilog-zneo-z16f" title="Permalink to this headline"></a></h2>
 <p><strong>Zilog z16f2800100zcog development kit</strong>. This port use the Zilog
 z16f2800100zcog development kit and the Zilog ZDS-II Windows command
 line tools. The development environment is either Windows native or
@@ -3148,11 +3144,11 @@ available in NuttX version 0.3.7. A working NuttShell (NSH)
 configuration as added in NuttX-6.33 (although a patch is required to
 work around an issue with a ZDS-II 5.0.1 tool problem). An ESPI
 driver was added in NuttX-7.2. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/z16/z16f/z16f2800100zcog/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/z16/z16f/z16f2800100zcog/README.txt">README</a>
 file for further information.</p>
-</div>
-<div class="section" id="zilog-ez80-acclaim">
-<h2>Zilog eZ80 Acclaim!<a class="headerlink" href="#zilog-ez80-acclaim" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="zilog-ez80-acclaim">
+<h2>Zilog eZ80 Acclaim!<a class="headerlink" href="#zilog-ez80-acclaim" title="Permalink to this headline"></a></h2>
 <p><strong>Zilog eZ80Acclaim! Microcontroller</strong>. There are four eZ80Acclaim!
 ports:</p>
 <ul class="simple">
@@ -3176,9 +3172,9 @@ appropriate configuration to enable support.</p>
 <p>C intrinsics are also required. Some may be found in the Zilog ZDS-II
 distribution, requiring some modification to build with the GNU assembler.
 Additional intrinsics for 64-bit support must be supplied.</p>
-</div>
-<div class="section" id="zilog-z8encore">
-<h2>Zilog Z8Encore!<a class="headerlink" href="#zilog-z8encore" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="zilog-z8encore">
+<h2>Zilog Z8Encore!<a class="headerlink" href="#zilog-z8encore" title="Permalink to this headline"></a></h2>
 <p><strong>Zilog Z8Encore! Microcontroller</strong>. This port uses the either:</p>
 <ul class="simple">
 <li><p>Zilog z8encore000zco development kit, Z8F6403 part, or</p></li>
@@ -3189,13 +3185,13 @@ environment is either Windows native or Cygwin under Windows.</p>
 <p><strong>STATUS:</strong> This release has been verified only on the ZiLOG ZDS-II
 Z8Encore! chip simulation as of nuttx-0.3.9. Refer to the NuttX board
 README files for the
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/z80/z8/z8encore000zco/README.txt">z8encore000zco</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/z80/z8/z8encore000zco/README.txt">z8encore000zco</a>
 and for
-the<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/z80/z8/z8f64200100kit/README.txt">z8f64200100kit</a>
+the<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/z80/z8/z8f64200100kit/README.txt">z8f64200100kit</a>
 for further information.</p>
-</div>
-<div class="section" id="zilog-z180">
-<h2>Zilog Z180<a class="headerlink" href="#zilog-z180" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="zilog-z180">
+<h2>Zilog Z180<a class="headerlink" href="#zilog-z180" title="Permalink to this headline"></a></h2>
 <p><strong>P112</strong>. The P112 is a hobbyist single board computer based on a 16MHz
 Z80182 with up to 1MB of memory, serial, parallel and diskette IO, and
 realtime clock, in a 3.5-inch drive form factor. The P112 computer
@@ -3208,18 +3204,18 @@ makes additional P112 derivative hobbyist home brew computers.</p>
 P112 board. Boards from Kickstarter project will not be available,
 however, until the third quarter of 2013. So it will be some time before
 this port is verified on hardware. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/z80/z180/p112/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/z80/z180/p112/README.txt">README</a>
 file for further information.</p>
-</div>
-<div class="section" id="zilog-z80">
-<h2>Zilog Z80<a class="headerlink" href="#zilog-z80" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="zilog-z80">
+<h2>Zilog Z80<a class="headerlink" href="#zilog-z80" title="Permalink to this headline"></a></h2>
 <p><strong>Z80 Instruction Set Simulator</strong>. This port uses the
 <a class="reference external" href="http://sdcc.sourceforge.net/">SDCC</a> toolchain under Linux or Cygwin
 (verified using version 2.6.0). This port has been verified using only a
 Z80 instruction simulator called z80sim.</p>
 <p><strong>STATUS:</strong> This port is complete and stable to the extent that it can
 be tested using an instruction set simulator. Refer to the NuttX board
-<a class="reference external" href="https://github.com/apache/incubator-nuttx/blob/master/boards/z80/z80/z80sim/README.txt">README</a>
+<a class="reference external" href="https://github.com/apache/nuttx/blob/master/boards/z80/z80/z80sim/README.txt">README</a>
 file for further information.</p>
 <p><strong>XTRS: TRS-80 Model I/III/4/4P Emulator for Unix</strong>. A very similar Z80
 port is available for <a class="reference external" href="http://www.tim-mann.org/xtrs.html">XTRS</a>, the
@@ -3243,47 +3239,35 @@ under Linux or Cygwin. Configurations are available in that buildroot
 to support ARM, Cortex-M3, avr, m68k, m68hc11, m68hc12, m9s12,
 blackfin, m32c, h8, and SuperH ports.</p>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="development_environments.html" class="btn btn-neutral float-right" title="Development Environments" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="supported_platforms.html" class="btn btn-neutral float-left" title="Supported Platforms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="development_environments.html" class="btn btn-neutral float-right" title="Development Environments" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, The Apache Software Foundation.
+    <p>&#169; Copyright 2020, The Apache Software Foundation.</p>
+  </div>
 
-    </p>
-  </div> 
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

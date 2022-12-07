@@ -17,63 +17,38 @@
  under the License.
 -->
 
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Configuration Settings &mdash; NuttX latest documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Customizing the NuttShell" href="customizing.html" />
     <link rel="prev" title="Commands" href="commands.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
   
     <a href="../../index.html" class="icon icon-home"> NuttX
   
@@ -98,6 +73,12 @@
     
     <option value="../../../10.1.0" >10.1.0</option>
     
+    <option value="../../../10.2.0" >10.2.0</option>
+    
+    <option value="../../../10.3.0" >10.3.0</option>
+    
+    <option value="../../../11.0.0" >11.0.0</option>
+    
     </select>
   </div>
 
@@ -110,21 +91,13 @@
   </form>
 </div>
 
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Home</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction/inviolables.html">The Inviolable Principles of NuttX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../platforms/index.html">Supported Platforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../components/index.html">OS Components</a></li>
@@ -149,81 +122,37 @@
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../guides/index.html">Guides</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">NuttX</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../index.html">Applications</a> &raquo;</li>
-        
           <li><a href="index.html">NuttShell (NSH)</a> &raquo;</li>
-        
       <li>Configuration Settings</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/applications/nsh/config.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="configuration-settings">
-<h1>Configuration Settings<a class="headerlink" href="#configuration-settings" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="configuration-settings">
+<h1>Configuration Settings<a class="headerlink" href="#configuration-settings" title="Permalink to this headline"></a></h1>
 <p>The availability of the above commands depends upon features that may or
 may not be enabled in the NuttX configuration file. The following
 <a class="reference internal" href="#cmddependencies"><span class="std std-ref">cmdtable</span></a> indicates the dependency of each command on
@@ -235,8 +164,8 @@ Configuration settings specific to NSH as discussed at the
 command can be individually disabled via the settings in the rightmost
 column. All of these settings make the configuration of NSH potentially
 complex but also allow it to squeeze into very small memory footprints.</p>
-<div class="section" id="command-dependencies-on-configuration-settings">
-<span id="cmddependencies"></span><h2>Command Dependencies on Configuration Settings<a class="headerlink" href="#command-dependencies-on-configuration-settings" title="Permalink to this headline">¶</a></h2>
+<section id="command-dependencies-on-configuration-settings">
+<span id="cmddependencies"></span><h2>Command Dependencies on Configuration Settings<a class="headerlink" href="#command-dependencies-on-configuration-settings" title="Permalink to this headline"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 23%" />
@@ -539,8 +468,9 @@ complex but also allow it to squeeze into very small memory footprints.</p>
 <td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_DISABLE_SOURCE</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="commands.html#cmdtelnetd"><span class="std std-ref">Time Start the Telnet Daemon (telnetd)</span></a></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_TELNET</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_DISABLE_TELNETD</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_TELNET</span></code> &amp;&amp;
+<code class="docutils literal notranslate"><span class="pre">CONFIG_SYSTEM_TELNETD</span></code></p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="commands.html#cmdtest"><span class="std std-ref">Evaluate Expression (test)</span></a></p></td>
 <td><p>!  <code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_DISABLESCRIPT</span></code></p></td>
@@ -612,9 +542,9 @@ complex but also allow it to squeeze into very small memory footprints.</p>
 <dd><p>Verbose help output can be suppressed by defining <code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_HELP_TERSE</span></code>. In that case, the help command is still available but will be slightly smaller.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="built-in-command-dependencies-on-configuration-settings">
-<h2>Built-In Command Dependencies on Configuration Settings<a class="headerlink" href="#built-in-command-dependencies-on-configuration-settings" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="built-in-command-dependencies-on-configuration-settings">
+<h2>Built-In Command Dependencies on Configuration Settings<a class="headerlink" href="#built-in-command-dependencies-on-configuration-settings" title="Permalink to this headline"></a></h2>
 <p>All built-in applications require that support for NSH built-in
 applications has been enabled. This support is enabled with
 <code class="docutils literal notranslate"><span class="pre">CONFIG_BUILTIN=y</span></code> and <code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_BUILTIN_APPS=y</span></code>.</p>
@@ -637,9 +567,9 @@ applications has been enabled. This support is enabled with
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="nsh-specific-configuration-settings">
-<span id="nshconfiguration"></span><h2>NSH-Specific Configuration Settings<a class="headerlink" href="#nsh-specific-configuration-settings" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="nsh-specific-configuration-settings">
+<span id="nshconfiguration"></span><h2>NSH-Specific Configuration Settings<a class="headerlink" href="#nsh-specific-configuration-settings" title="Permalink to this headline"></a></h2>
 <p>The behavior of NSH can be modified with the following settings in the
 <code class="docutils literal notranslate"><span class="pre">boards/&lt;arch&gt;/&lt;chip&gt;/&lt;board&gt;/defconfig</span></code> file:</p>
 <table class="docutils align-default">
@@ -794,9 +724,10 @@ registered as <code class="docutils literal notranslate"><span class="pre">/dev/
 Default is zero.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_ROMFSETC</span></code></p></td>
-<td><p>Mount a ROMFS file system at <code class="docutils literal notranslate"><span class="pre">/etc</span></code> and provide a startup
-script at <code class="docutils literal notranslate"><span class="pre">/etc/init.d/rcS</span></code>.
-The default startup script will mount a FAT FS RAMDISK at
+<td><p>Mount a ROMFS file system at <code class="docutils literal notranslate"><span class="pre">/etc</span></code> and provide a system init
+script at <code class="docutils literal notranslate"><span class="pre">/etc/init.d.rc.sysinit</span></code> and a startup script at
+<code class="docutils literal notranslate"><span class="pre">/etc/init.d/rcS</span></code>.
+The default system init script will mount a FAT FS RAMDISK at
 <code class="docutils literal notranslate"><span class="pre">/tmp</span></code> but the logic is <a class="reference external" href="#startupscript">easily extensible</a>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_CONSOLE</span></code></p></td>
@@ -932,8 +863,8 @@ NSH variable has not been set). Unsets NSH local variable &lt;a&gt;.</p></td>
 resources used by the Telnet daemon and by the Telnet clients.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 32%" />
-<col style="width: 68%" />
+<col style="width: 34%" />
+<col style="width: 66%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Configuration</p></th>
@@ -941,19 +872,19 @@ resources used by the Telnet daemon and by the Telnet clients.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_TELNETD_PORT</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_SYSTEM_TELNETD_PORT</span></code></p></td>
 <td><p>The telnet daemon will listen on this TCP port number for connections. Default: 23</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_TELNETD_DAEMONPRIO</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_SYSTEM_TELNETD_PRIORITY</span></code></p></td>
 <td><p>Priority of the Telnet daemon. Default: <code class="docutils literal notranslate"><span class="pre">SCHED_PRIORITY_DEFAULT</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_TELNETD_DAEMONSTACKSIZE</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_SYSTEM_TELNETD_STACKSIZE</span></code></p></td>
 <td><p>Stack size allocated for the Telnet daemon. Default: 2048</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_TELNETD_CLIENTPRIO</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_SYSTEM_TELNETD_SESSION_PRIORITY</span></code></p></td>
 <td><p>Priority of the Telnet client. Default: <code class="docutils literal notranslate"><span class="pre">SCHED_PRIORITY_DEFAULT</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_TELNETD_CLIENTSTACKSIZE</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_SYSTEM_TELNETD_SESSION_STACKSIZE</span></code></p></td>
 <td><p>Stack size allocated for the Telnet client. Default: 2048</p></td>
 </tr>
 </tbody>
@@ -979,28 +910,24 @@ configuration settings that apply:</p>
 <td><p>TCP/IP support is required for telnet (as well as various other
 TCP-related configuration settings).</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_IOBUFFER_SIZE</span></code></p></td>
-<td><p>Determines the size of the I/O buffer to use for sending/ receiving
-TELNET commands/responses</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_DHCPC</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_DHCPC</span></code></p></td>
 <td><p>Obtain the IP address via DHCP.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_IPADDR</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_IPADDR</span></code></p></td>
 <td><p>If <code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_DHCPC</span></code> is NOT set, then the static IP address must be
 provided.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_DRIPADDR</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_DRIPADDR</span></code></p></td>
 <td><p>Default router IP address</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_NETMASK</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_NETMASK</span></code></p></td>
 <td><p>Network mask</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_NOMAC</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_NOMAC</span></code></p></td>
 <td><p>Set if your Ethernet hardware has no built-in MAC address. If set, a
 bogus MAC will be assigned.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_MAX_ROUNDTRIP</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_MAX_ROUNDTRIP</span></code></p></td>
 <td><p>This is the maximum round trip for a response to a ICMP ECHO request. It
 is in units of deciseconds. The default is 20 (2 seconds).</p></td>
 </tr>
@@ -1060,16 +987,21 @@ that can be found at <code class="docutils literal notranslate"><span class="pre
 but that can be changed with this setting. This must be a
 absolute path beginning with ‘<code class="docutils literal notranslate"><span class="pre">/</span></code>’ and enclosed in quotes.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_INITSCRIPT</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_SYSINITSCRIPT</span></code></p></td>
+<td><p>This is the relative path to the system init script within the
+mountpoint. The default is <code class="docutils literal notranslate"><span class="pre">&quot;init.d/rc.sysinit&quot;</span></code>. This is a relative
+path and must not start with ‘<code class="docutils literal notranslate"><span class="pre">/</span></code>’ but must be enclosed in quotes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_INITSCRIPT</span></code></p></td>
 <td><p>This is the relative path to the startup script within the
 mountpoint. The default is <code class="docutils literal notranslate"><span class="pre">&quot;init.d/rcS&quot;</span></code>. This is a relative
 path and must not start with ‘<code class="docutils literal notranslate"><span class="pre">/</span></code>’ but must be enclosed in quotes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_ROMFSDEVNO</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_ROMFSDEVNO</span></code></p></td>
 <td><p>This is the minor number of the ROMFS block device.
 The default is ‘<code class="docutils literal notranslate"><span class="pre">0</span></code>’ corresponding to <code class="docutils literal notranslate"><span class="pre">/dev/ram0</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_ROMFSSECTSIZE</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_ROMFSSECTSIZE</span></code></p></td>
 <td><p>This is the sector size to use with the ROMFS volume. Since the
 default volume is very small, this defaults to 64 but should
 be increased if the ROMFS volume were to be become large.
@@ -1077,7 +1009,7 @@ Any value selected must be a power of 2.</p></td>
 </tr>
 </tbody>
 </table>
-<p>When the default <code class="docutils literal notranslate"><span class="pre">rcS</span></code> file used when <code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_ROMFSETC</span></code> is
+<p>When the default <code class="docutils literal notranslate"><span class="pre">rc.sysinit</span></code> file used when <code class="docutils literal notranslate"><span class="pre">CONFIG_NSH_ROMFSETC</span></code> is
 selected, it will mount a FAT FS under <code class="docutils literal notranslate"><span class="pre">/tmp</span></code>. The following
 selections describe that FAT FS.</p>
 <table class="docutils align-default">
@@ -1100,47 +1032,35 @@ The default is ‘<code class="docutils literal notranslate"><span class="pre">1
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="customizing.html" class="btn btn-neutral float-right" title="Customizing the NuttShell" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="commands.html" class="btn btn-neutral float-left" title="Commands" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="customizing.html" class="btn btn-neutral float-right" title="Customizing the NuttShell" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, The Apache Software Foundation.
+    <p>&#169; Copyright 2020, The Apache Software Foundation.</p>
+  </div>
 
-    </p>
-  </div> 
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

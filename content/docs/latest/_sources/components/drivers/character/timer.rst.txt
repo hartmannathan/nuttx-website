@@ -56,7 +56,7 @@ Timer Example
 
 The previously selected example will basically consult the timer status, set a timer alarm interval, set a timer signal handler function to be notified at the alarm, which only increments a variable, and then it will start the timer. The application will periodically consult the timer status at the sample rate previously configured through the ``menuconfig`` to follow the time left until the timer expires. After the samples have been read, the application stops de timer.
 
-The `example code <https://github.com/apache/incubator-nuttx-apps/blob/master/examples/timer/timer_main.c>`_  may be explored, its path is at ``/examples/timer/timer_main.c`` in the apps' repository.
+The `example code <https://github.com/apache/nuttx-apps/blob/master/examples/timer/timer_main.c>`_  may be explored, its path is at ``/examples/timer/timer_main.c`` in the apps' repository.
 
 In NuttX, the timer driver is a character driver and when a chip supports multiple timers, each one is accessible through its respective file in ``/dev`` directory. Each timer is registered using a unique numeric identifier (i.e. ``/dev/timer0``, ``/dev/timer1``, ...).
 
@@ -80,7 +80,6 @@ The first necessary thing to be done in order to use the timer driver in an appl
 .. code-block:: c
 
   #include <nuttx/timers/timer.h>
-
 
 At an application level, the timer functionalities may be accessed through ``ioctl`` systems calls. The available ``ioctl`` commands are:
 
@@ -139,8 +138,6 @@ These ``struct timer_ops_s`` keeps pointers to the implementation of each operat
       CODE int (*maxtimeout)(FAR struct timer_lowerhalf_s *lower,
                               FAR uint32_t *maxtimeout);
    };
-
-
 
 Since  ``ioctl`` system calls expect a file descriptor, before using these commands, it's necessary to open the timer device special file in order to get a file descriptor. The following snippet demonstrates how to do so:
 
@@ -296,7 +293,6 @@ This command may be used like so:
       return EXIT_FAILURE;
     }
 
-
 .. c:macro:: TCIOC_MAXTIMEOUT
 
 The ``TCIOC_MAXTIMEOUT`` command calls the ``maxtimeout`` operation, which is described below.
@@ -327,7 +323,6 @@ This command may be used like so:
   /* Print the maximum supported timeout */
 
   printf("Maximum supported timeout: %" PRIu32 "\n", max_timeout);
-
 
 Those snippets were taken from the Example which provides a great resource to demonstrate how to use those ``ioctl`` commands.
 

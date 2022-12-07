@@ -17,63 +17,38 @@
  under the License.
 -->
 
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Guides &mdash; NuttX latest documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="NFS Client How-To" href="nfs.html" />
     <link rel="prev" title="FAQ" href="../faq/index.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
   
     <a href="../index.html" class="icon icon-home"> NuttX
   
@@ -98,6 +73,12 @@
     
     <option value="../../10.1.0" >10.1.0</option>
     
+    <option value="../../10.2.0" >10.2.0</option>
+    
+    <option value="../../10.3.0" >10.3.0</option>
+    
+    <option value="../../11.0.0" >11.0.0</option>
+    
     </select>
   </div>
 
@@ -110,21 +91,13 @@
   </form>
 </div>
 
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quickstart/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/inviolables.html">The Inviolable Principles of NuttX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../platforms/index.html">Supported Platforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../components/index.html">OS Components</a></li>
@@ -138,83 +111,44 @@
 <li class="toctree-l2"><a class="reference internal" href="drivers.html">Drivers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tasktrace.html">Task Trace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cpp_cmake.html">C++ Example using CMake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pysimcoder.html">pysimCoder integration with NuttX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customboards.html">Custom Boards How-To</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customapps.html">Custom Apps How-to</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">NuttX</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Guides</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/guides/index.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
 <p>Create “tutorial” type documentation for specific subjects not to be covered in more general terms.</p>
 </div>
-<div class="section" id="guides">
-<h1>Guides<a class="headerlink" href="#guides" title="Permalink to this headline">¶</a></h1>
+<section id="guides">
+<h1>Guides<a class="headerlink" href="#guides" title="Permalink to this headline"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="nfs.html">NFS Client How-To</a><ul>
@@ -228,6 +162,7 @@
 <li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="simulator.html#compiling">Compiling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simulator.html#accessing-the-network">Accessing the Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html#testing-capturing-tcp-network-traffic">Testing / capturing TCP network traffic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simulator.html#stopping">Stopping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simulator.html#debugging">Debugging</a></li>
 </ul>
@@ -291,48 +226,74 @@
 <li class="toctree-l2"><a class="reference internal" href="cpp_cmake.html#building">Building</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="pysimcoder.html">pysimCoder integration with NuttX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pysimcoder.html#peripheral-support">Peripheral Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pysimcoder.html#nuttx-configuration">NuttX Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pysimcoder.html#using-pysimcoder-to-design-nuttx-application">Using pysimCoder to design NuttX application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="customboards.html">Custom Boards How-To</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="customboards.html#add-a-custom-board">Add a Custom Board</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="customboards.html#kconfig-settings">Kconfig Settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="customapps.html">Custom Apps How-to</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="customapps.html#replace-the-apps-directory-completely">1. Replace The Apps/ Directory Completely</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="customapps.html#makefile">1.1 Makefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="customapps.html#kconfig">1.2 Kconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="customapps.html#customhello-c">1.3 CustomHello.c</a></li>
+<li class="toctree-l3"><a class="reference internal" href="customapps.html#building-with-the-customapps-directory">1.4 Building with the CustomApps Directory</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="customapps.html#extend-the-apps-directory-to-include-a-new-custom-directory">2. Extend the apps/ directory to include a new custom directory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="customapps.html#custom-apps-directory">2.1 Custom Apps Directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="customapps.html#make-defs">2.2 Make.defs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="customapps.html#id1">2.3 Makefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="customapps.html#customhello-app">2.4 CustomHello App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="customapps.html#customhello-makefile">2.5 CustomHello Makefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="customapps.html#customhello-kconfig">2.6 CustomHello Kconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="customapps.html#build-and-run">2.7 Build and Run</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="customapps.html#include-an-additional-custom-cirectory-outside-of-the-main-source-trees">3. Include an Additional Custom Cirectory Outside of the Main Source Trees</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="customapps.html#create-custom-apps-directory-and-a-symbolic-link">3.1 Create Custom Apps directory and a Symbolic Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="customapps.html#make-defs-etc">3.2 Make.defs etc.</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="nfs.html" class="btn btn-neutral float-right" title="NFS Client How-To" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../faq/index.html" class="btn btn-neutral float-left" title="FAQ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="nfs.html" class="btn btn-neutral float-right" title="NFS Client How-To" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, The Apache Software Foundation.
+    <p>&#169; Copyright 2020, The Apache Software Foundation.</p>
+  </div>
 
-    </p>
-  </div> 
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
